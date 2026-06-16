@@ -33,28 +33,44 @@
         </div>
         <div class="hud-row hud-timer-row">
             <span class="hud-timer-label">⏱️ TEMPO</span>
-            <span class="hud-stat hud-timer-stat" id="hud-timer">00:00:00</span>
+            <span class="hud-stat hud-timer-stat" id="hud-timer">00:00</span>
         </div>
     </div>
 
     <div id="screen-splash" class="screen active">
         <div class="splash-bg">
-            <div class="splash-sky"></div>
+            <div class="splash-sky" id="splash-sky"></div>
             <div id="splash-stars"></div>
+            <div class="splash-moon" id="splash-moon">🌙</div>
             <div class="splash-cloud cloud-1"></div>
             <div class="splash-cloud cloud-2"></div>
             <div class="splash-cloud cloud-3"></div>
-            <div class="splash-sun"></div>
+            <div class="splash-sun" id="splash-sun"></div>
             <div class="splash-hills">
                 <div class="splash-hill splash-hill-1"></div>
                 <div class="splash-hill splash-hill-2"></div>
                 <div class="splash-hill splash-hill-3"></div>
             </div>
+            <div class="splash-pasture-fence">
+                <div class="splash-fence-post"></div>
+                <div class="splash-fence-rail splash-fence-rail-top"></div>
+                <div class="splash-fence-rail splash-fence-rail-bot"></div>
+                <div class="splash-fence-post"></div>
+                <div class="splash-fence-post"></div>
+                <div class="splash-fence-post"></div>
+                <div class="splash-fence-post"></div>
+                <div class="splash-fence-post"></div>
+            </div>
             <div class="splash-animals-layer" id="animals-layer">
                 <div class="splash-animal cow-a" id="cow-a">🐄</div>
+                <div class="splash-animal cow-b" id="cow-b">🐄</div>
+                <div class="splash-animal cow-c" id="cow-c">🐄</div>
                 <div class="splash-animal calf-a" id="calf-a">🐮</div>
+                <div class="splash-animal bull-a" id="bull-a">🐂</div>
             </div>
         </div>
+        <!-- Day/Night toggle top-right -->
+        <button id="btn-day-night" onclick="toggleDayNight()" title="Alternar dia/noite">☀️</button>
         <div class="splash-content">
             <p class="splash-eyebrow">Simulador Educacional de Manejo</p>
             <h1 class="splash-title">Vidas do <span>Campo</span></h1>
@@ -62,6 +78,14 @@
             <div class="splash-btns">
                 <button class="btn btn-yellow" onclick="switchScreen('screen-setup')">Começar Jornada</button>
                 <button class="btn btn-ghost" onclick="showRanking()">Ver Ranking</button>
+            </div>
+            <div id="resume-banner" style="display:none; margin-top:12px; background:rgba(94,186,133,0.1); border:1px solid var(--green2); border-radius:12px; padding:12px 16px; text-align:left; width:100%;">
+                <div style="font-size:0.85rem; color:var(--green2); font-weight:800; margin-bottom:6px;">↩️ Partida em andamento</div>
+                <div id="resume-info" style="font-size:0.8rem; color:var(--text2); margin-bottom:10px;"></div>
+                <div style="display:flex; gap:8px;">
+                    <button class="btn btn-primary" style="margin:0; flex:1; padding:10px;" onclick="resumeGame()">Continuar →</button>
+                    <button class="btn btn-outline" style="margin:0; flex:1; padding:10px;" onclick="dismissCheckpoint()">Nova Partida</button>
+                </div>
             </div>
         </div>
     </div>
@@ -128,6 +152,7 @@
     <div id="screen-station-intro" class="screen screen-pad" style="justify-content:center;">
         <div class="intro-card-header">
             <span class="station-badge" id="intro-badge">Etapa 1 de 7</span>
+            <div class="station-progress-track" id="station-track"></div>
             <span class="intro-emoji" id="intro-emoji">🌸</span>
             <h2 class="intro-title" id="intro-title">Título</h2>
         </div>
@@ -224,7 +249,7 @@
         
         <div class="card final-stats-card">
             <h3 class="stats-header">📊 Desempenho da Temporada</h3>
-            <div class="report-row"><span class="report-label">Lucro / Caixa</span><span class="report-value green" id="final-score"></span></div>
+            <div class="report-row"><span class="report-label">Saldo Final</span><span class="report-value green" id="final-score"></span></div>
             <div class="report-row"><span class="report-label">Taxa de Sobrevivência</span><span class="report-value" id="final-survival"></span></div>
             <div class="report-row"><span class="report-label">Perfil Jogado</span><span class="report-value" id="final-profile"></span></div>
             
