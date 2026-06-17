@@ -55,7 +55,7 @@ const CAMPUS_LIVES_QUIZ_DATABASE = [
         "question": "Se uma vaca ou ovelha chegar muito magra ou muito gorda no momento do parto, o que pode acontecer?",
         "options": ["Não muda nada, o filhote nasce saudável de qualquer forma.", "Animais muito gordos ou magros têm mais chances de ter partos difíceis e doenças após o nascimento.", "Animais magros sempre produzem mais leite.", "Animais gordos nunca têm problemas de parto."],
         "correct": 1, "hint": "O equilíbrio é a chave. Extremos na saúde da mãe afetam diretamente o nascimento.",
-        "explanation": "O peso ideal (nem gorda, nem magra) garante que a mãe tenha força para parir e não desenvolva problemas metabólicos perigosos após o comportamento do parto, evitando a famosa síndrome da vaca caída.",
+        "explanation": "O Escore de Condição Corporal (ECC) ideal ao parto é entre 3,0 e 3,5 (escala de 1 a 5). Animais muito gordos (ECC > 3,75) mobilizam gordura em excesso após o parto, sobrecarregando o fígado e levando à cetose e lipidose hepática. Animais muito magros (ECC < 2,5) chegam sem reservas e não conseguem sustentar o pico de lactação, gerando Balanço Energético Negativo severo. Em ambos os casos, o risco de doenças metabólicas perigosas no pós-parto — como cetose, hipocalcemia e retenção de placenta — aumenta significativamente, comprometendo a mãe e o filhote.",
         "funFact": "O termo técnico usado por veterinários para avaliar a gordura do animal visualmente se chama Escore de Condição Corporal (ECC)."
     },
     {
@@ -150,7 +150,7 @@ const CAMPUS_LIVES_QUIZ_DATABASE = [
     },
     {
         "id": 20202, "station": 2, "species": "Bovinos", "audience": "estudante", "difficulty": 2, "type": "interpretacao", "tags": ["colostrometro", "refratometro", "qualidade"],
-        "question": "Ao utilizar um refratômetro de Brix para avaliar a quality do colostro bovino na fazenda, qual o valor de corte em porcentagem (%) que indica um colostro de excelente qualidade (superior a 50 mg/mL de IgG)?",
+        "question": "Ao utilizar um refratômetro de Brix para avaliar a qualidade do colostro bovino na fazenda, qual o valor de corte em porcentagem (%) que indica um colostro de excelente qualidade (superior a 50 mg/mL de IgG)?",
         "options": ["Abaixo de 18% Brix", "Entre 19% e 21% Brix", "Igual ou superior a 22% Brix", "O refratômetro de Brix avalia apenas açúcar, não servindo para anticorpos."],
         "correct": 2, "hint": "Um valor alto de Brix correlaciona-se diretamente com uma alta densidade de proteínas totais na secreção.",
         "explanation": "Um valor de >= 22% no Refratômetro de Brix indica um colostro de alta qualidade, contendo pelo menos 50 g de IgG por litro. Colostros abaixo desse valor devem ser descartados (ou fornecidos apenas para animais mais velhos como nutrição simples) e substituídos por colostro de banco com qualidade validada.",
@@ -168,7 +168,7 @@ const CAMPUS_LIVES_QUIZ_DATABASE = [
         "id": 20301, "station": 2, "species": "Bovinos", "audience": "veterinario", "difficulty": 2, "type": "calculo", "tags": ["dosagem", "manejo", "imunidade"],
         "question": "Deseja-se colostrar um bezerro neonato da raça Holandesa com peso vivo estimado em 40 kg nas primeiras 2 horas de vida. Sabendo que a recomendação técnica atual para garantir a transferência de imunidade passiva eficiente é de fornecer 10% do peso vivo na primeira mamada, qual o volume exato a ser administrado?",
         "options": ["2,0 Litros", "4,0 Litros", "6,0 Litros", "1,5 Litros"],
-        "correct": 1, "hint": "Basta realizar o cálculo simples de porcentagem sobre a massa do animal.",
+        "correct": 1, "hint": "A recomendação técnica atual é 10% do peso vivo na primeira mamada. Identifique o peso do animal e aplique esse percentual diretamente para encontrar o volume exato em litros.",
         "explanation": "Para um animal de 40 kg, 10% do peso corporal equivale a 4,0 litros de colostro de alta qualidade. Esse volume garante a ingestão mínima de 150 a 200g de IgG puras necessárias para atingir níveis séricos de segurança (> 10 mg/mL de IgG no soro do bezerro após 24h).",
         "funFact": "Fornecer 4 litros via mamadeira pode ser difícil pelo cansaço do neonato; nesses casos, o uso técnico da Sonda Esofágica é altamente recomendado e seguro se posicionado corretamente no esôfago."
     },
@@ -203,7 +203,7 @@ const CAMPUS_LIVES_QUIZ_DATABASE = [
         "question": "❄️ Uma frente fria intensa atingiu a fazenda logo após o nascimento de um bezerro. Além de secá-lo e abrigá-lo, o que é fundamental para ele produzir calor e não morrer de hipotermia?",
         "options": ["Deixá-lo correr livremente pelo pasto para se aquecer.", "Garantir que ele mame o colostro quente nas primeiras horas, pois é o 'combustível' para o corpo dele gerar calor.", "Dar banho com água morna e deixá-lo no sol.", "Apenas colocar uma capa, não precisa mamar."],
         "correct": 1, "hint": "O filhote gasta muita energia para tremer e gerar calor. Ele precisa de uma fonte rica em energia rapidamente.",
-        "explanation": "O colostro não é apenas proteção (anticorpos), ele é altamente energético e rico em gordura. Sem esse combustível, o bezerro esgota suas reservas rapidamente tentando se aquecer, entrando em hipotermia fatal.",
+        "explanation": "O colostro não é apenas proteção (anticorpos): é altamente energético e rico em gordura. Sem esse combustível, o bezerro esgota suas reservas rapidamente tentando se aquecer, entrando em hipotermia fatal. Atenção crítica: o colostro deve ser aquecido a 38–39°C antes de ser oferecido ao bezerro hipotérmico. Oferecer colostro frio ou temperatura ambiente a um animal com temperatura retal abaixo de 37°C pode agravar a hipotermia central e reduzir a absorção de IgG.",
         "funFact": "Bezerros nascem com uma reserva de gordura muito pequena comparado a outros animais, dependendo quase que totalmente da gordura do colostro nos dias frios!"
     },
     {
@@ -234,7 +234,7 @@ const CAMPUS_LIVES_QUIZ_DATABASE = [
         "id": 30301, "station": 3, "species": "Ovinos", "audience": "veterinario", "difficulty": 3, "type": "caso_clinico", "tags": ["glicose", "intraperitoneal", "emergencia"],
         "question": "CASO CLÍNICO: Cordeiro de 12 horas de vida é encontrado em decúbito lateral em piquete úmido. Temperatura retal de 35,5°C (hipotermia severa) e ausência completa dos reflexos de deglutição e sucção. Qual o protocolo imediato obrigatório?",
         "options": ["Fornecer 100 mL de colostro hiperaquecido a 50°C via sonda esofágica antes do aquecimento.", "Administrar Glicose 20% por via intraperitoneal (10 mL/kg, morna) e, na sequência, instituir aquecimento gradual externo por ar forçado.", "Aplicar dexametasona IM e realizar imersão imediata do neonato em banho-maria a 42°C.", "Efetuar massagem vigorosa em todo o corpo com álcool iodado e administrar solução eletrolítica oral."],
-        "correct": 1, "hint": "Se você aquecer externamente um animal hipotérmico que está sem reservas de açúcar no sangue, o cérebro dele entrará em colapso por falta de glicose (choque hipoglicêmico).",
+        "correct": 1, "hint": "Pense na sequência correta: o aquecimento externo acelera o metabolismo e aumenta a demanda de combustível. O que precisa ser reposto ANTES de elevar essa demanda em um animal exausto?",
         "explanation": "Cordeiro com hipotermia severa (< 37°C) e há mais de 6 horas de vida esgotou suas reservas de glicogênio e gordura marrom. Aquecê-lo sem corrigir a glicose acelera o metabolismo periférico, consumindo o restinho de açúcar do cérebro, gerando convulsão e morte. O protocolo exige Glicose Intraperitoneal morna para absorção rápida, seguida de aquecimento.",
         "funFact": "A injeção intraperitoneal é feita inserindo a agulha a cerca de 1,5 cm ao lado do umbigo e direcionada para o quadril do animal. É um procedimento de campo simples que salva milhares de cordeiros."
     },
@@ -416,6 +416,308 @@ const CAMPUS_LIVES_QUIZ_DATABASE = [
     }
 ];
 
+/* ==========================================================================
+   BANCO EXPANDIDO — 42 QUESTÕES NOVAS (Auditoria v2)
+   2 por estação × 7 estações × 3 níveis = 42 questões inéditas
+   ========================================================================== */
+const NOVAS_QUESTOES = [
+    { "id": 10105, "station": 1, "species": "all", "audience": "leigo", "difficulty": 1, "type": "conceitual", "tags": ["parto", "sinais", "manejo"],
+      "question": "🐄🐑 Quais são os sinais mais claros de que uma vaca ou ovelha está prestes a parir nas próximas horas?",
+      "options": ["O animal come mais do que o habitual, fica agitado e vocaliza constantemente no meio do rebanho.", "O úbere fica cheio e inchado, a vulva fica rosada e relaxada, a garupa 'afunda' e a fêmea se isola do restante do bando buscando um canto quieto.", "Os olhos ficam vermelhos, o animal começa a coxear e a temperatura cai para menos de 35°C.", "A fêmea começa a recusar água e a esfregar o focinho no chão repetidamente durante horas."],
+      "correct": 1, "hint": "A natureza prepara o corpo da mãe para o parto de forma visível. Observe o úbere, a garupa e o comportamento social dela nas horas que antecedem o nascimento.",
+      "explanation": "Entre 12 e 24 horas antes do parto, o ligamento sacro-isquiático relaxa (a 'garupa afunda'), a vulva fica edemaciada e avermelhada, o úbere enche com colostro espesso e a fêmea busca se isolar. Reconhecer esses sinais permite ao produtor estar presente, oferecer assistência imediata ao filhote assim que nasce e reduzir drasticamente a mortalidade neonatal nas primeiras horas de vida.",
+      "funFact": "Muitos produtores experientes fazem o 'teste do colostro antes do parto': se ao pressionar o teto sair líquido aguado e claro, o parto ainda está longe; se sair um líquido espesso e amarelado (colostro), o nascimento é questão de horas!" },
+
+    { "id": 10106, "station": 1, "species": "all", "audience": "leigo", "difficulty": 2, "type": "prevencao", "tags": ["distócia", "emergencia", "parto"],
+      "question": "Quanto tempo, no máximo, uma fêmea pode ficar em trabalho de parto ativo — com esforço visível e contrações fortes — antes de o produtor chamar ajuda veterinária de emergência?",
+      "options": ["Não há limite de tempo. A natureza sempre resolve sozinha, independentemente de quanto demore o processo.", "Se o filhote não nascer dentro de 2 a 4 horas do início do esforço ativo, é necessário chamar o veterinário imediatamente.", "O prazo seguro é de 24 horas de esforço máximo. Somente depois disso se busca ajuda profissional.", "Só se chama o veterinário quando o filhote já está morto ou a mãe não consegue mais se levantar."],
+      "correct": 1, "hint": "Contrações fortes e prolongadas sem resultado são uma emergência. O filhote pode morrer por falta de oxigênio e a mãe pode sofrer lesões internas irreversíveis.",
+      "explanation": "Em partos normais, a expulsão do filhote após o início das contrações expulsivas deve ocorrer em até 2 horas em bovinos e 1 hora em ovinos. Além desse tempo sem progresso, configura-se Distócia (parto difícil), que exige manobra obstétrica veterinária. Tentativas amadoras de puxar o filhote sem técnica adequada podem lacerar o canal do parto da mãe e matar a cria por trauma.",
+      "funFact": "Entre as principais causas de distócia em bovinos está o desalinhamento do filhote dentro do útero. Em casos de 'cabeça virada para o flanco', o veterinário precisa girar e reposicionar o filhote manualmente dentro do útero antes de puxá-lo com segurança!" },
+
+    { "id": 10204, "station": 1, "species": "Bovinos", "audience": "estudante", "difficulty": 2, "type": "aplicacao", "tags": ["periodo_transicao", "far_off", "close_up", "nutricao"],
+      "question": "Na nutrição de vacas no período de transição, qual a diferença estratégica entre as fases 'far-off' e 'close-up' e o principal objetivo de cada uma?",
+      "options": ["Não há distinção. Vacas no período seco devem receber a mesma dieta do dia da secagem até o parto para evitar oscilações metabólicas.", "Far-off (21 a 60 dias antes do parto): dieta de mantença controlando ECC entre 3,0 e 3,25; Close-up (últimas 3 semanas): maior densidade energética e proteica para adaptar a microbiota ruminal ao concentrado pós-parto e reduzir o BEN inicial.", "Far-off: alta energia para engordar o feto ao máximo; Close-up: restrição total de cálcio e fósforo para prevenção de hipocalcemia.", "A fase far-off exige sais aniônicos em alta dose; a fase close-up, apenas volumosos de alta lignina sem concentrado."],
+      "correct": 1, "hint": "São duas fases com objetivos completamente distintos: na primeira, preservamos o ECC ideal; na segunda, preparamos o rúmen e o metabolismo para suportar a alta demanda da lactação que virá.",
+      "explanation": "Na fase far-off, evita-se ganho excessivo de ECC (risco de lipomobilização e cetose pós-parto). Na fase close-up, aumenta-se progressivamente a energia e proteína metabolizável para adaptar a microbiota ruminal ao concentrado, elevar a capacidade de consumo de MS no pós-parto e reduzir o descompasso entre pico de produção e pico de ingestão, minimizando o Balanço Energético Negativo (BEN) inicial.",
+      "funFact": "Vacas sem fase close-up adequada têm maior prevalência de cetose, deslocamento de abomaso à esquerda e retenção de placenta no pós-parto imediato — todos problemas caros que poderiam ser prevenidos com nutrição de transição correta." },
+
+    { "id": 10205, "station": 1, "species": "Bovinos", "audience": "estudante", "difficulty": 2, "type": "interpretacao", "tags": ["cetose", "bhb", "monitoramento", "pre_parto"],
+      "question": "Qual o método de campo mais prático para monitorar risco de cetose subclínica em vacas na fase close-up e qual o valor de corte que indica risco aumentado?",
+      "options": ["Coleta de urina para mensurar pH urinário. Valores abaixo de 6,0 indicam cetose estabelecida.", "Dosagem de Beta-Hidroxibutirato (BHB) sérico via aparelho portátil (como o Precision Xtra ou FreeStyle Optium). Valores acima de 0,6 mmol/L no pré-parto indicam lipomobilização precoce e risco aumentado de cetose clínica no pós-parto.", "Avaliação visual do escore de fezes: fezes pastosas indicam fermentação excessiva e cetose em andamento.", "Pesagem semanal das vacas comparada a curva padrão de perda de condição pós-parto esperada."],
+      "correct": 1, "hint": "Existe um aparelho de glicosímetro adaptado, barato e portátil, que mede o principal corpo cetônico no sangue a campo com uma gota de sangue da veia da cauda.",
+      "explanation": "O BHB (beta-hidroxibutirato) é o principal metabólito da lipólise hepática durante o BEN. Valores acima de 0,6 mmol/L no pré-parto indicam mobilização precoce de gordura, com alta probabilidade de cetose clínica ou subclínica nas primeiras 2 a 3 semanas de lactação. O monitoramento permite intervenção nutricional proativa (propilenoglicol, niacina) antes que o problema se instale e comprometa produção e fertilidade.",
+      "funFact": "A cetose subclínica no pré-parto aumenta em até 3 vezes o risco de retenção de placenta, metrite e deslocamento de abomaso nas semanas seguintes ao parto. Um exame barato de campo pode evitar um tratamento caro logo depois!" },
+
+    { "id": 10303, "station": 1, "species": "Bovinos", "audience": "veterinario", "difficulty": 3, "type": "aplicacao", "tags": ["dcad", "sais_anionicos", "pH_urinario", "hipocalcemia"],
+      "question": "Ao implementar dietas aniônicas (DCAD negativo) para prevenção de hipocalcemia periparto, qual o método de monitoramento a campo que confirma eficácia do protocolo e qual a meta de pH urinário para raças europeias?",
+      "options": ["Dosagem semanal de PTH sérico e calcitonina, comparados a vacas controle não suplementadas com sais aniônicos.", "Mensuração diária do pH urinário em amostra coletada 4 a 6 horas após a refeição: pH entre 6,0 e 6,8 confirma acidose metabólica compensada adequada para sensibilizar receptores de PTH.", "Avaliação quinzenal do ECC e comparação com curva padrão de perda de condição pós-parto esperada para a raça.", "Coleta de líquido ruminal via sonda orogástrica com meta de pH ruminal entre 5,8 e 6,2 como indicativo de acidose sistêmica."],
+      "correct": 1, "hint": "O rim é o grande regulador do equilíbrio ácido-base. Quando há acidose metabólica controlada, o animal elimina cátions em excesso pela urina, acidificando-a de forma mensurável com uma fita reagente de farmácia.",
+      "explanation": "A mensuração do pH urinário é o padrão de campo para confirmar eficácia do DCAD negativo. pH entre 6,0–6,8 confirma acidose metabólica compensada suficiente para sensibilizar os receptores de PTH nos ossos e rins. pH acima de 7,5 indica protocolo não funcionando (palatabilidade do sal ou formulação incorreta). pH abaixo de 5,5 indica acidose excessiva, com risco de anorexia e imunossupressão.",
+      "funFact": "Para vacas zebuínas (Bos indicus), as metas de pH urinário são ligeiramente mais altas (6,2–7,0) em razão de sua maior eficiência de absorção de cálcio intestinal em comparação às raças europeias como a Holandesa e a Jersey." },
+
+    { "id": 10304, "station": 1, "species": "Bovinos", "audience": "veterinario", "difficulty": 3, "type": "caso_clinico", "tags": ["distócia", "obstetrica", "manobra", "cesarea"],
+      "question": "CASO CLÍNICO: Vaca multípara com 285 dias de gestação está em trabalho de parto há 3 horas sem progressão. No exame de toque, você identifica apresentação anterior, posição dorsal, postura com desvio lateral da cabeça (cabeça desviada para o flanco direito). Qual a manobra obstétrica inicial e a janela de tempo para tentativa antes de indicar cesariana?",
+      "options": ["Aplicar 20 UI de ocitocina IV imediatamente e aguardar mais 2 horas antes de qualquer manobra manual.", "Realizar retropulsão do feto com lubrificação abundante (carboximetilcelulose), corrigir o desvio cefálico com laço ou gancho cefálico posicionando a cabeça sobre os membros antes de tentar extração. Indicar cesariana se não houver progressão em 15 a 20 minutos de manipulação ativa.", "Realizar tração máxima imediata sobre os membros anteriores com correntes obstétricas sem correção prévia da postura, pois a força de tração corrige a posição da cabeça automaticamente.", "Indicar cesariana imediata sem tentativa de correção manual, pois qualquer manobra em desvio lateral de cabeça é contraindicada para a espécie bovina."],
+      "correct": 1, "hint": "Em distócias por deflexão lateral de cabeça, a correção da postura cefálica é obrigatória antes de qualquer tração. A cabeça precisa estar apoiada sobre os membros para que o diâmetro do conjunto caiba no canal pélvico.",
+      "explanation": "O desvio lateral de cabeça é uma das distócias fetais mais comuns em bovinos. Sem corrigir a postura cefálica, a tração aumenta o diâmetro do conjunto cabeça+membros, provocando lacerações no canal do parto e trauma fetal severo. A retropulsão reduz a pressão do canal e cria espaço para a manobra. Após 15 a 20 minutos sem progressão, a cesariana oferece melhor prognóstico fetal e materno.",
+      "funFact": "O desvio lateral de cabeça é mais comum em novilhas de primeira cria com bezerros de raças de grande porte. O acompanhamento frequente das fêmeas no piquete-maternidade (a cada 30 minutos nas horas finais) reduz dramaticamente a mortalidade perinatal por distócia." },
+
+    { "id": 20104, "station": 2, "species": "all", "audience": "leigo", "difficulty": 2, "type": "prevencao", "tags": ["qualidade_colostro", "manejo", "mae"],
+      "question": "🍼 Quais situações podem fazer com que a mãe produza um colostro fraco, com pouca proteção para o filhote?",
+      "options": ["Mãe de primeira cria (novilha), vaca muito gorda que parou de comer antes do parto, ou mãe que começou a perder leite pelo teto antes de o filhote nascer.", "A qualidade do colostro é sempre a mesma, independentemente do estado de saúde, da raça ou do manejo nutricional da mãe.", "Apenas animais de raças importadas produzem colostro fraco. Raças nacionais sempre produzem colostro de excelente qualidade.", "Mães que bebem muita água no final da gestação produzem colostro mais diluído e consequentemente mais fraco em anticorpos."],
+      "correct": 0, "hint": "O colostro é fabricado pelo corpo da mãe. Tudo que afeta a saúde, a alimentação ou a experiência dela influencia diretamente a qualidade desse leite especial.",
+      "explanation": "Novilhas no primeiro parto geralmente produzem colostro com menos anticorpos do que vacas adultas, pois ainda foram expostas a menos doenças ao longo da vida. Vacas muito gordas tendem a reduzir o consumo de alimentos antes do parto, comprometendo a produção. E se a mãe começar a perder leite antes de parir (colostragem precoce), parte dos anticorpos vai embora antes do filhote nascer. Por isso fazendas bem manejadas guardam colostro das vacas mais velhas e saudáveis como reserva estratégica.",
+      "funFact": "Existe um aparelho chamado refratômetro de Brix que avalia a qualidade do colostro em segundos com apenas 2 gotas: se marcar 22% ou mais, o colostro é excelente; abaixo disso, deve ser trocado pelo banco de colostro!" },
+
+    { "id": 20105, "station": 2, "species": "Bovinos", "audience": "leigo", "difficulty": 2, "type": "aplicacao", "tags": ["sonda_esofagica", "mamadeira", "bezerro_fraco"],
+      "question": "Se um bezerro recém-nascido está muito fraco para ficar em pé e mamar sozinho na mãe, qual a forma correta de garantir que ele receba o colostro a tempo?",
+      "options": ["Esperar até que ele ganhe força suficiente para mamar sozinho, mesmo que demore 12 a 24 horas.", "Ordenhar o colostro da mãe e oferecer com mamadeira ou, se necessário, com uma sonda esofágica (introduzida no esôfago até o estômago), garantindo a chegada segura do líquido sem risco de engasgo.", "Forçar o filhote debaixo da mãe em posição horizontal para tentar fazê-lo sugar mesmo sem conseguir engolir.", "Dar leite normal de outra vaca que já está há mais de 60 dias em lactação, pois o colostro não é obrigatório se o filhote estiver fraco."],
+      "correct": 1, "hint": "O tempo é o maior inimigo do filhote fraco. Ele não pode esperar, mas também não pode se engasgar. A sonda esofágica resolve os dois problemas ao mesmo tempo.",
+      "explanation": "Filhotes fracos correm alto risco de aspiração pulmonar ao tentar mamar sem força. A mamadeira permite controlar a velocidade da mamada. A sonda esofágica é uma ferramenta segura que conduz o colostro diretamente ao estômago sem risco de engasgo — especialmente indicada nos primeiros 60 minutos de vida quando o animal está em decúbito. A habilidade de usar uma sonda esofágica é um dos treinamentos mais importantes para qualquer trabalhador de fazenda com maternidade.",
+      "funFact": "Um bezerro Holandês recém-nascido de 40 kg precisa receber pelo menos 4 litros de colostro nas primeiras 2 horas de vida — o equivalente a 4 garrafas de 1 litro — para garantir proteção adequada!" },
+
+    { "id": 20204, "station": 2, "species": "Bovinos", "audience": "estudante", "difficulty": 2, "type": "imunologia", "tags": ["igg1", "igg2", "imunidade_passiva", "colostro"],
+      "question": "No sistema imunológico bovino, qual a principal diferença funcional entre as subclasses IgG1 e IgG2 presentes no colostro?",
+      "options": ["IgG1 é produzida exclusivamente no baço fetal durante a gestação, enquanto a IgG2 é transferida somente pelo leite de transição após o 3º dia pós-parto.", "A IgG1 (predominante no colostro bovino, ~75% das imunoglobulinas) é ativamente transportada do soro sanguíneo materno para o colostro via receptor FcRn, conferindo imunidade sistêmica ao neonato; a IgG2 predomina no soro adulto, sendo menos eficientemente transferida para a glândula mamária.", "Não há distinção funcional entre IgG1 e IgG2 em ruminantes; ambas atuam exclusivamente na mucosa intestinal sem absorção sistêmica.", "A IgG2 é a subclasse absolutamente predominante no colostro bovino (>90%) e a única responsável pela proteção sistêmica do neonato."],
+      "correct": 1, "hint": "Observe qual subclasse é ativamente 'recrutada' para o colostro pela glândula mamária bovina e qual fica predominantemente no soro materno.",
+      "explanation": "Em bovinos, a IgG1 é a subclasse predominante no colostro (75–80% das imunoglobulinas), pois é ativamente transportada do soro materno para o úbere via receptor FcRn (Neonatal Fc Receptor). Após absorção intestinal pelo bezerro na janela neonatal, promove imunidade humoral sistêmica. A IgG2 predomina no soro bovino adulto mas é menos eficientemente transportada para o colostro. A IgA e IgM colostrais oferecem proteção local no trato gastrointestinal do neonato.",
+      "funFact": "O receptor FcRn que transporta a IgG1 ao colostro é o mesmo receptor que, no intestino do neonato, realiza a absorção reversa das imunoglobulinas para a corrente sanguínea nas primeiras horas de vida. O mesmo 'porteiro' dos dois lados da parede!" },
+
+    { "id": 20205, "station": 2, "species": "Bovinos", "audience": "estudante", "difficulty": 3, "type": "prevencao", "tags": ["pasteurizacao", "johne", "mycobacterium", "biosseguridade"],
+      "question": "Por que a pasteurização do colostro bovino a 60°C por 60 minutos (método LTLT) é considerada uma medida estratégica de biosseguridade em rebanhos leiteiros de alto padrão sanitário?",
+      "options": ["Porque elimina as gorduras saturadas do colostro, reduzindo o risco de hiperlipidemia em bezerros de alto ganho de peso.", "Porque inativa o Mycobacterium avium subsp. paratuberculosis (agente da Doença de Johne), Salmonella spp. e Mycoplasma bovis, sem destruir significativamente as imunoglobulinas presentes no colostro.", "Porque esteriliza completamente o colostro, eliminando 100% de todos os vírus, bactérias e parasitas existentes na secreção.", "Porque reduz o teor de lactose do colostro, prevenindo a diarreia osmótica em bezerros sensíveis à lactose."],
+      "correct": 1, "hint": "O Mycobacterium paratuberculosis é o principal alvo: causa enterite progressiva incurável em bovinos adultos e pode ser transmitido verticalmente pelo colostro de vacas portadoras subclínicas.",
+      "explanation": "A Paratuberculose (Doença de Johne) é causada pelo M. avium subsp. paratuberculosis, que pode ser transmitido pelo colostro de vacas portadoras assintomáticas. A pasteurização LTLT (60°C/60 min) inativa esse microrganismo sem comprometer significativamente a qualidade imunológica do colostro — estudos mostram perda inferior a 15% nas concentrações de IgG. Diferente da pasteurização do leite (72°C/15s), temperaturas mais altas desnaturariam as proteínas colostrais.",
+      "funFact": "Um estudo no Journal of Dairy Science demonstrou que bezerros alimentados com colostro pasteurizado a 60°C apresentaram níveis séricos de IgG equivalentes aos alimentados com colostro cru de mesma qualidade, mas com redução de 70% na contaminação bacteriana!" },
+
+    { "id": 20303, "station": 2, "species": "Bovinos", "audience": "veterinario", "difficulty": 3, "type": "calculo", "tags": ["plasma_oral", "ftip", "imunidade_passiva", "alternativa_colostro"],
+      "question": "Em uma fazenda sem banco de colostro e com bezerro de menos de 6 horas de vida, o plasma bovino por via oral pode ser utilizado como alternativa emergencial. Qual concentração mínima de IgG no plasma e qual volume por kg/PV são necessários para oferecer transferência passiva aceitável?",
+      "options": ["Plasma com IgG > 1.000 mg/dL; volume de 1 mL/kg via oral como dose única nas primeiras 12 horas.", "Plasma com IgG entre 2.000 e 5.000 mg/dL; 1 a 2 mL/kg por via intraperitoneal é suficiente após fechamento intestinal (> 24h).", "Plasma com IgG igual ou maior que 2.000 mg/dL (idealmente igual ou maior que 3.000 mg/dL); 20 a 40 mL/kg por via oral antes das 6 horas de vida, aproveitando a janela de absorção macromolecular intestinal.", "Plasma de qualquer origem com IgG mensurável; dose padronizada de 100 mL total via subcutânea para qualquer peso corporal."],
+      "correct": 2, "hint": "Para que a imunidade passiva funcione via oral, o neonato precisa estar dentro da janela de absorção de macromoléculas e o plasma precisa ter concentração de IgG suficientemente alta para compensar a eficiência menor de absorção comparada ao colostro.",
+      "explanation": "A via oral é eficaz apenas nas primeiras 6–12h de vida, enquanto a pinocitose nos enterócitos está ativa. O plasma deve ter IgG igual ou maior que 2.000–3.000 mg/dL (confirmado por eletroforese ou imunodifusão radial). O volume de 20–40 mL/kg compensa a menor eficiência de absorção do plasma em relação ao colostro nativo. Após o fechamento intestinal (> 24h), apenas as vias intraperitoneal ou intravenosa oferecem imunidade humoral sistêmica eficaz.",
+      "funFact": "O plasma hiperimune de vacas vacinadas com bacterinas específicas (E. coli K99, Salmonella, Rotavírus) contém concentrações de anticorpos específicos muito maiores que o plasma de doadores não vacinados — ideal para uso emergencial em bezerreiros com surto ativo de diarreia neonatal!" },
+
+    { "id": 20304, "station": 2, "species": "all", "audience": "veterinario", "difficulty": 3, "type": "caso_clinico", "tags": ["ftip", "auditoria", "pst", "protocolo_colostragem"],
+      "question": "CASO CLÍNICO: Em uma auditoria de bezerreiro com 35 animais entre 3 e 7 dias de vida, a mensuração de PST via refratômetro clínico revela que 11 animais (31,4%) apresentam PST abaixo de 5,0 g/dL. Qual o protocolo de intervenção imediata e quais indicadores de processo você revisaria para identificar a causa-raiz da falha?",
+      "options": ["Administrar 2 g de amoxicilina oral/dia por 5 dias aos animais com falha e manter o protocolo atual de colostragem sem alterações.", "Para os animais com FTIP confirmada (PST abaixo de 5,0 g/dL): administrar plasma IV ou IP (20–40 mL/kg); Revisão obrigatória dos 5 pilares do protocolo: (1) timing do fornecimento abaixo de 2h, (2) volume igual ou maior que 10% do PV, (3) qualidade Brix igual ou maior que 22%, (4) método de fornecimento (sonda quando necessário), (5) higiene dos equipamentos e práticas de ordenha.", "Substituir o colostro materno por substituto comercial por via oral em todos os animais sem triagem prévia de PST e retestar o lote em 30 dias.", "Realizar transfusão de sangue total de vacas doadoras na dose de 10 mL/kg em todos os animais do lote, independentemente do PST individual de cada um."],
+      "correct": 1, "hint": "A FTIP já instalada requer plasma para correção imediata. Mas o mais importante é identificar onde o protocolo falhou para impedir que os próximos filhotes repitam o mesmo desfecho.",
+      "explanation": "Prevalência de FTIP superior a 10% é inaceitável e exige investigação imediata. Os 5 pilares a revisar: (1) tempo de fornecimento (abaixo de 2h do nascimento), (2) volume adequado (igual ou maior que 10% do PV na 1ª mamada), (3) qualidade do colostro (Brix igual ou maior que 22%), (4) método de oferta (sonda quando bezerro fraco), (5) higiene para evitar contaminação bacteriana. Para os animais já com FTIP (acima de 24h de vida), a via oral não funciona: plasma IP ou IV é a única forma de fornecer imunidade humoral sistêmica eficaz.",
+      "funFact": "Propriedades leiteiras de alta performance nos EUA e Europa adotam a meta de menos de 5% de bezerros com PST abaixo de 5,0 g/dL e realizam auditorias mensais de PST como indicador obrigatório de qualidade do bezerreiro — tão importante quanto a produção de leite!" },
+
+    { "id": 30104, "station": 3, "species": "all", "audience": "leigo", "difficulty": 1, "type": "conceitual", "tags": ["temperatura_normal", "termometro", "monitoramento"],
+      "question": "❄️ Qual é a temperatura corporal normal de um bezerro ou cordeiro saudável e como o produtor pode verificar isso na fazenda?",
+      "options": ["Temperatura normal entre 38,5°C e 40,0°C. Mede-se com termômetro clínico (igual ao humano) introduzido no reto do animal por pelo menos 1 minuto.", "A temperatura normal dos filhotes é a mesma dos humanos (36°C a 37°C) e só pode ser medida em laboratório com equipamentos especiais.", "Não existe temperatura padrão para filhotes. O produtor deve avaliar apenas pelo toque na orelha e na pata do animal.", "A temperatura normal de bezerros é de 42°C a 43°C. Qualquer valor abaixo disso indica problema grave que exige ação imediata."],
+      "correct": 0, "hint": "A temperatura de ruminantes é um pouco mais alta que a humana. Um termômetro retal simples é a ferramenta mais confiável e barata para checar se o filhote está bem.",
+      "explanation": "A temperatura retal normal de bovinos e ovinos varia entre 38,5°C e 40,0°C. Abaixo de 38,0°C já indica hipotermia e exige atenção imediata. Qualquer termômetro digital de ponta pode ser usado: basta introduzir suavemente o bulbo no reto do animal por pelo menos 1 minuto. É um equipamento simples e essencial em fazendas com parições no inverno.",
+      "funFact": "As orelhas e os membros do filhote ficam sempre mais frios que o corpo central nas hipotermias. Por isso, orelhas geladas num recém-nascido são um sinal de alerta fácil de perceber mesmo sem termômetro — e exigem ação imediata!" },
+
+    { "id": 30105, "station": 3, "species": "all", "audience": "leigo", "difficulty": 2, "type": "prevencao", "tags": ["abrigo", "capa", "lampada_infravermelha", "prevencao_frio"],
+      "question": "Quais atitudes práticas do produtor ajudam diretamente a prevenir a hipotermia em bezerros e cordeiros nascidos em noites muito frias?",
+      "options": ["Deixar o filhote ao relento durante a noite para que ele se adapte naturalmente ao frio do ambiente da região.", "Usar capas ou roupinhas específicas para filhotes, forrar o chão da baia com cama seca e limpa (palha ou serragem) e instalar lâmpadas infravermelhas de aquecimento nos abrigos de parição.", "Molhar o filhote com água fria assim que nasce para estimular a respiração pelo choque térmico.", "Amarrar o filhote próximo à mãe para impedir que ele se movimente e gaste energia tentando se aquecer."],
+      "correct": 1, "hint": "Evitar a perda de calor é tão importante quanto aquecer. Três coisas protegem o filhote: cama seca como isolante térmico, proteção contra o vento com a capa, e uma fonte de calor externo.",
+      "explanation": "Capas de neoprene ou algodão para filhotes reduzem a perda de calor em até 50% em noites frias. A cama seca (palha ou serragem) funciona como isolante térmico entre o corpo do filhote e o chão gelado. As lâmpadas infravermelhas elevam a temperatura do abrigo sem risco de queimadura. Juntas, essas medidas simples e de baixo custo evitam a maior parte das mortes neonatais por hipotermia.",
+      "funFact": "As capinhas para bezerros foram criadas nos EUA e Europa para evitar mortes por hipotermia em raças como a Holandesa, que tem pouca gordura subcutânea ao nascer. Hoje são usadas no Brasil inteiro durante o inverno e já salvam milhares de animais por temporada!" },
+
+    { "id": 30204, "station": 3, "species": "all", "audience": "estudante", "difficulty": 2, "type": "aplicacao", "tags": ["classificacao_hipotermia", "protocolo_clinico", "hipotermia"],
+      "question": "Como se classifica clinicamente a hipotermia neonatal em ovinos e bovinos e quais as condutas correspondentes a cada grau de severidade?",
+      "options": ["Hipotermia é classificada apenas em 'presente ou ausente'; a conduta única é aquecimento por banho-maria a 42°C, independentemente da temperatura retal medida.", "Leve (38,0–38,4°C): secagem e aquecimento ambiental passivo; Moderada (36,0–37,9°C): aquecimento externo ativo mais colostro morno por via oral; Severa (abaixo de 36°C com ausência de reflexo de sucção): glicose IP ou IV aquecida mais aquecimento gradual externo, com via oral contraindicada pelo risco de broncoaspiração.", "Hipotermia Grau I (abaixo de 36°C): transfusão de plasma quente IV imediata; Hipotermia Grau II (36–38°C): dexametasona IM isolada e aquecimento passivo ao sol.", "A classificação da hipotermia é feita exclusivamente pelo nível de glicemia sérica, sem correlação com a temperatura retal do animal."],
+      "correct": 1, "hint": "O reflexo de sucção é o divisor de águas no protocolo clínico: se está ausente, a via oral é PROIBIDA pelo risco de aspiração pulmonar. A temperatura retal guia o grau e determina a via de tratamento.",
+      "explanation": "A classificação prática em campo: Leve (38,0–38,4°C) — animal treme, em pé ou quase, reflexo de sucção preservado; Moderada (36–37,9°C) — caído mas responsivo, reflexo de sucção fraco mas presente; Severa (abaixo de 36°C) — decúbito lateral, sem reflexo de sucção, bradicardia, hipoglicemia instalada. Na hipotermia severa, administrar glicose IP ou IV aquecida ANTES do reaquecimento externo é mandatório para evitar coma hipoglicêmico durante o aumento da demanda metabólica pelo reaquecimento.",
+      "funFact": "O aquecimento muito rápido em hipotermia severa pode causar o fenômeno de 'afterdrop': vasos periféricos dilatam repentinamente e sangue frio retorna ao coração, podendo desencadear fibrilação ventricular. O reaquecimento gradual (máximo 1 grau Celsius por hora) salva vidas!" },
+
+    { "id": 30205, "station": 3, "species": "all", "audience": "estudante", "difficulty": 2, "type": "interpretacao", "tags": ["hipoglicemia", "termogenese", "gordura_marrom", "hipotermia"],
+      "question": "Por qual razão a hipoglicemia é uma consequência quase inevitável da hipotermia severa e prolongada em neonatos ruminantes?",
+      "options": ["Porque o frio inibe diretamente a produção de insulina pelo pâncreas, causando hiperglicemia que progressivamente consome o glicogênio hepático.", "Porque os estoques de glicogênio hepático (muito limitados em neonatos) e o Tecido Adiposo Marrom são esgotados na tentativa de manter a temperatura corporal pela termogênese, consumindo toda a reserva energética disponível.", "Porque a hipotermia causa vasoconstrição severa no trato gastrointestinal, bloqueando a absorção de glicose do leite materno por até 72 horas após o nascimento.", "Porque o frio intenso provoca hemólise das hemácias, que passam a consumir glicose sanguínea como combustível energético alternativo."],
+      "correct": 1, "hint": "Pense em um animal tentando desesperadamente gerar calor. Quanto combustível ele consome? De onde vem esse combustível num neonato que talvez nem tenha mamado ainda?",
+      "explanation": "Os neonatos de ruminantes possuem reservas de glicogênio hepático e Tecido Adiposo Marrom (TAM) extremamente limitadas, suficientes para no máximo 24–48h de termogênese máxima. Na hipotermia severa, o organismo mobiliza essas reservas aceleradamente via tremores musculares (glicogênio) e termogênese química (TAM). Se o filhote não recebeu colostro ou está hipotérmico há mais de 6–8h, as reservas se esgotam e a glicemia cai abaixo de 40 mg/dL, comprometendo o SNC.",
+      "funFact": "Nos primeiros 30 minutos de vida, um cordeiro em ambiente muito frio (0°C) pode consumir até 50% dos seus estoques de Tecido Adiposo Marrom apenas tentando se aquecer. Uma hora sem colostro num dia gelado pode ser fatal!" },
+
+    { "id": 30303, "station": 3, "species": "Bovinos", "audience": "veterinario", "difficulty": 3, "type": "caso_clinico", "tags": ["afterdrop", "reaquecimento_gradual", "hipotermia", "fluidoterapia"],
+      "question": "CASO CLÍNICO: Após administração de glicose IP aquecida em um bezerro com hipotermia severa (temperatura retal 34,2°C), você inicia o reaquecimento externo. Qual a taxa de reaquecimento adequada e qual fenômeno fisiopatológico justifica a contraindicação do reaquecimento rápido?",
+      "options": ["Reaquecimento deve ser o mais rápido possível (3°C por hora ou mais) para reduzir o tempo de isquemia cerebral. O único risco documentado é hipercalemia de reperfusão.", "Reaquecimento gradual de 0,5 a 1,0°C/hora. O fenômeno de 'afterdrop' (queda paradoxal da temperatura central após início do aquecimento periférico) ocorre pela vasodilatação cutânea que redistribui sangue frio periférico ao coração, podendo causar fibrilação ventricular fatal.", "Reaquecimento em banho-maria a 45°C por 30 minutos seguido de exposição direta ao sol. O único risco relevante é queimadura superficial da pele do neonato.", "Taxa de reaquecimento padronizada de 2°C/hora em todos os casos; o principal risco é hipernatremia por perda de fluidos pela pele durante o aquecimento externo."],
+      "correct": 1, "hint": "Imagine o que acontece quando os vasos da pele se dilatam de repente e o sangue que estava estagnado e frio nas extremidades retorna ao coração central de uma única vez.",
+      "explanation": "O fenômeno de 'afterdrop' é um risco real na hipotermia severa: ao aquecer perifericamente de forma rápida, os vasos cutâneos vasodilatam e o sangue frio acumulado nas extremidades retorna ao coração. Essa queda súbita na temperatura cardíaca pode desencadear arritmias ventriculares fatais. Por isso, o reaquecimento deve ser central (fluidos IV/IP aquecidos mais ar quente suave) e gradual (0,5–1°C/hora), com monitoramento cardíaco.",
+      "funFact": "O fenômeno de 'afterdrop' foi descrito pela primeira vez em mergulhadores hipotérmicos salvos em mares árticos: muitos morriam de fibrilação ventricular justamente ao serem aquecidos rapidamente. O protocolo foi adaptado para medicina veterinária neonatal décadas depois." },
+
+    { "id": 30304, "station": 3, "species": "Ovinos", "audience": "veterinario", "difficulty": 3, "type": "aplicacao", "tags": ["glicose", "intraperitoneal", "cordeiro", "emergencia"],
+      "question": "A administração de glicose a 20% por via intraperitoneal (IP) é técnica essencial em cordeiros com hipotermia severa. Qual o ponto anatômico correto, dose e temperatura da solução, e por que essa via é preferida à venosa nesses casos?",
+      "options": ["Aplicar no flanco esquerdo na fossa paralombar; dose de 5 mL/kg de glicose 50% em temperatura ambiente; a via IP é preferida por ser mais rápida do que a IV.", "Aplicar a 1,5–2 cm lateral ao umbigo, direcionando a agulha a 45° em direção ao quadril; dose de 10 mL/kg de glicose 20% aquecida a 38–39°C. A via IP é preferida por ser tecnicamente acessível a produtores treinados, dispensar acesso venoso, e ter absorção peritoneal suficientemente rápida para reverter hipoglicemia crítica em campo.", "Aplicar diretamente na veia safena lateral com agulha 22G; dose de 3 mL/kg de glicose 50% em temperatura ambiente; a IP é usada apenas quando o acesso venoso é impossível.", "Aplicar na fontanela craniana do cordeiro; dose de 1 mL/kg de glicose 10%; técnica desenvolvida exclusivamente para cordeiros prematuros de menos de 30 dias."],
+      "correct": 1, "hint": "O ponto anatômico correto fica logo ao lado do umbigo, e a solução precisa estar morna (próxima à temperatura corporal) para não agravar a hipotermia central do animal durante a infusão.",
+      "explanation": "O ponto de aplicação IP em cordeiros é 1,5–2 cm lateral ao umbigo (lado direito), com agulha 18–20G direcionada a 45° para o quadril. Dose: 10 mL/kg de glicose a 20% aquecida a 38–39°C. Soluções frias agravam a hipotermia e causam peritonite. Soluções acima de 20% causam irritação peritoneal e peritonite química. A via IP tem absorção rápida pelos vasos linfáticos peritoneais e pode ser realizada por técnicos e produtores treinados a campo.",
+      "funFact": "Essa técnica simples de glicose IP é responsável por salvar dezenas de milhares de cordeiros anualmente no Reino Unido, onde é ensinada como rotina obrigatória em todos os cursos de ovinocultura prática!" },
+
+    { "id": 40102, "station": 4, "species": "all", "audience": "leigo", "difficulty": 1, "type": "prevencao", "tags": ["higiene_baia", "pressao_infecciosa", "limpeza", "umbigo"],
+      "question": "🦠 Por que é tão importante trocar e limpar a cama (palha, serragem) da baia onde os filhotes ficam logo após o nascimento?",
+      "options": ["Apenas por questões estéticas e de apresentação da propriedade. A sujeira acumulada no chão não afeta a saúde dos filhotes.", "Porque fezes velhas acumuladas na cama funcionam como um 'hotel para bactérias'. Filhotes sem defesas que deitam ou andam nessa sujeira ficam expostos a bilhões de germes que causam diarreia, infecção de umbigo e pneumonia.", "Porque a palha velha produz gases que fazem os filhotes espirrar, o que é desconfortável mas sem risco à saúde.", "Porque os filhotes jovens comem a cama do chão e podem entupir o estômago com material indigestível."],
+      "correct": 1, "hint": "Um filhote nasce sem defesas no sangue. O ambiente limpo é a primeira linha de proteção enquanto o colostro ainda não foi absorvido pelo intestino.",
+      "explanation": "A cama suja acumula fezes ricas em bactérias perigosas como E. coli, Salmonella e Clostridium. Um filhote que nasce nesse ambiente absorve essas bactérias pela boca, pelo umbigo aberto e até pela pele. Como não tem anticorpos próprios ainda, basta uma pequena quantidade dessas bactérias para causar diarreia fulminante, septicemia e morte em 24 a 48 horas. Trocar a cama antes e depois de cada parto é uma das ações mais baratas e mais eficientes de redução de mortalidade neonatal.",
+      "funFact": "Especialistas calculam que a 'pressão de infecção' em uma baia com cama de 4 meses pode ser até 1.000 vezes maior do que em uma baia com cama trocada recentemente. Isso é o que os técnicos chamam do 'princípio do baldinho cheio'!" },
+
+    { "id": 40103, "station": 4, "species": "all", "audience": "leigo", "difficulty": 2, "type": "aplicacao", "tags": ["artrite_septica", "junta_boba", "umbigo", "iodo"],
+      "question": "Um produtor percebe que um bezerro de 2 semanas começou a coxear de uma pata, com a junta do joelho inchada, quente e o animal com febre. O que isso pode indicar e qual a relação com o umbigo?",
+      "options": ["O bezerro apenas se machucou ao correr no pasto. Não tem relação com o umbigo e resolve sozinho em 3 dias com repouso.", "A infecção do umbigo não tratada adequadamente logo após o nascimento pode se espalhar pelo sangue e se instalar nas articulações, causando artrite séptica (infecção dentro da junta). Exige atendimento veterinário urgente.", "Juntas inchadas em filhotes são sempre causadas por deficiência de vitamina D e falta de sol. Deve-se aplicar vitamina D injetável imediatamente.", "O animal ingeriu planta venenosa que causa inchaço nas articulações. Não tem nenhuma relação com o nascimento ou o umbigo."],
+      "correct": 1, "hint": "O umbigo é uma 'janela aberta' que vai diretamente para a circulação sanguínea. Bactérias que entram por um umbigo mal desinfetado podem viajar pelo sangue para qualquer órgão do corpo.",
+      "explanation": "A artrite séptica neonatal (popularmente conhecida como 'junta boba' ou 'mal do caruara') é uma das consequências mais graves da onfalite negligenciada. A bactéria entra pelo cordão umbilical mal desinfetado, ganha a circulação e se instala nas articulações. A infecção dentro da articulação causa dor intensa, febre e, se não tratada com antibióticos e drenagem, destrói permanentemente a cartilagem.",
+      "funFact": "Um umbigo que não foi mergulhado no iodo logo após o nascimento pode estar infectado por dentro mesmo parecendo seco por fora. Por isso a IMERSÃO (e não apenas pincelar) é tão crítica: o líquido precisa entrar dentro do canal umbilical!" },
+
+    { "id": 40203, "station": 4, "species": "Bovinos", "audience": "estudante", "difficulty": 2, "type": "interpretacao", "tags": ["diarreia", "etiologia", "ecoli", "faixa_etaria"],
+      "question": "O diagnóstico diferencial etiológico das diarreias neonatais é fortemente guiado pela faixa etária de ocorrência. Qual agente é considerado a principal causa de diarreia em bezerros entre 1 e 4 dias de vida?",
+      "options": ["Eimeria bovis (Coccidiose bovina), com pico de ocorrência entre 3 e 4 semanas de vida.", "Escherichia coli enterotoxigênica (ETEC, fímbria K99/F5), que coloniza e produz toxinas termoestáveis no intestino delgado de bezerros nas primeiras 72 a 96 horas de vida.", "Rotavírus bovino tipo A, predominante clinicamente entre 7 e 14 dias de vida.", "Cryptosporidium parvum, com pico de ocorrência característico entre 5 e 15 dias de vida."],
+      "correct": 1, "hint": "Há correlação temporal direta entre a capacidade de adesão do agente aos receptores específicos do enterócito imaturo e a faixa etária de maior suscetibilidade do neonato.",
+      "explanation": "A E. coli enterotoxigênica (ETEC K99+) possui fímbrias F5 que aderem especificamente a receptores do enterócito imaturo do neonato, predominando clinicamente nas primeiras 96h de vida. À medida que o intestino amadurece, esses receptores se modificam e a ETEC perde a capacidade de colonização eficiente. Rotavírus/Coronavírus surgem entre 5 e 14 dias; Cryptosporidium entre 5 e 15 dias; Salmonella e Eimeria em períodos mais tardios.",
+      "funFact": "A vacina comercial contra E. coli K99 aplicada nas mães no pré-parto garante alta concentração de anticorpos específicos anti-K99 no colostro, sendo a principal estratégia de prevenção contra a diarreia neonatal que mata bezerros nos primeiros 3 dias de vida!" },
+
+    { "id": 40204, "station": 4, "species": "Bovinos", "audience": "estudante", "difficulty": 3, "type": "caso_clinico", "tags": ["clostridiose", "clostridium_perfringens", "enterite_hemorragica"],
+      "question": "Qual a manifestação clínica e o mecanismo fisiopatológico da enterotoxemia por Clostridium perfringens tipo C em bezerros neonatos?",
+      "options": ["Diarreia crônica com má absorção progressiva de proteínas por destruição gradual das microvilosidades jejunais ao longo de 2 a 3 semanas.", "Enterite hemorrágica aguda, frequentemente fulminante (morte sem sinais premonitórios), causada pelas toxinas alfa e beta que destroem o epitélio intestinal, provocando necrose hemorrágica do delgado.", "Timpanismo ruminal com alcalose metabólica por fermentação excessiva da lactose do colostro por bactérias anaeróbias no rúmen imaturo.", "Artrite poliarticular migratória seguida de meningoencefalite progressiva, com mortalidade de 30% ao longo de 5 a 7 dias."],
+      "correct": 1, "hint": "As toxinas do C. perfringens tipo C são extremamente potentes e de ação ultrarrápida sobre o epitélio intestinal. Em neonatos, a morte pode ocorrer antes mesmo de o produtor perceber qualquer sinal clínico.",
+      "explanation": "O C. perfringens tipo C produz principalmente as toxinas alfa e beta. A toxina beta é altamente necrotizante e destrói o epitélio intestinal, causando enterite hemorrágica com necrose das alças. Em neonatos, a doença progride tão rapidamente que muitas vezes o único sinal clínico observado é a morte súbita. A prevenção por vacinação das mães com bacterina polivalente no pré-parto é a única estratégia verdadeiramente eficaz.",
+      "funFact": "Diferente do C. perfringens tipo D (que afeta cordeiros maiores com dieta rica em concentrado), o tipo C ataca preferencialmente neonatos nas primeiras 48 a 72 horas de vida, independentemente da dieta. É a causa de morte súbita mais devastadora e imprevisível em bezerreiros sem vacinação adequada!" },
+
+    { "id": 40303, "station": 4, "species": "Bovinos", "audience": "veterinario", "difficulty": 3, "type": "aplicacao", "tags": ["contaminacao_colostro", "higiene", "ftip", "bacterias"],
+      "question": "Bezerros alimentados com colostro altamente contaminado por bactérias (acima de 100.000 UFC/mL) apresentam comprometimento da absorção de IgG mesmo quando o colostro tem excelente qualidade imunológica. Qual a principal razão fisiológica para esse fenômeno?",
+      "options": ["As bactérias produzem enzimas proteolíticas que degradam as imunoglobulinas no lúmen intestinal antes de qualquer absorção pelo enterócito.", "A endotoxina bacteriana (LPS) ativa receptores TLR4 dos enterócitos, acelerando o fechamento das junções celulares e reduzindo prematuramente a janela de absorção macromolecular por pinocitose.", "As bactérias competem diretamente com os receptores FcRn dos enterócitos pela ligação às imunoglobulinas, bloqueando fisicamente o transporte transcelular.", "Não há relação documentada entre contaminação bacteriana do colostro e absorção de IgG. A qualidade imunológica mensurada pelo Brix é o único fator relevante."],
+      "correct": 1, "hint": "Pense em como a endotoxina bacteriana (LPS) afeta a sinalização intracelular dos enterócitos do neonato. Existe um mecanismo imunológico de 'alarme' que pode fechar prematuramente a janela de absorção.",
+      "explanation": "A endotoxina (LPS) de bactérias Gram-negativas ativa os receptores TLR4 dos enterócitos do neonato, desencadeando sinalização inflamatória local que acelera o 'closure' intestinal. Colostros com mais de 100.000 UFC/mL resultam em menores níveis séricos de IgG nos bezerros mesmo com ótima qualidade pelo Brix. O protocolo padrão de higiene: (1) lavagem com detergente alcalino quente (acima de 45°C), (2) enxágue com água quente, (3) imersão em solução desinfetante (iodóforo 25 ppm ou peróxido de hidrogênio ativado), (4) enxágue final.",
+      "funFact": "Colostros com mais de 1.000.000 UFC/mL (comuns em mamadeiras mal lavadas) podem reduzir a absorção de IgG em até 40%, transformando um colostro de excelente qualidade (Brix igual ou maior que 22%) em proteção insuficiente para o neonato!" },
+
+    { "id": 40304, "station": 4, "species": "Bovinos", "audience": "veterinario", "difficulty": 3, "type": "caso_clinico", "tags": ["artrite_septica", "antibioticoterapia", "prognostico", "lavagem_articular"],
+      "question": "CASO CLÍNICO: Bezerro de 18 dias com artrite séptica em articulação fêmoro-tíbio-patelar esquerda: distensão capsular severa, temperatura articular elevada, dor intensa e febre de 40,5°C. Punção articular revela líquido sinovial turvo com leucócitos acima de 30.000 células/µL e proteína acima de 3 g/dL. Qual a conduta terapêutica e o prognóstico?",
+      "options": ["Antibioticoterapia sistêmica oral por 5 dias com amoxicilina e AINE tópico; prognóstico excelente em 100% dos casos tratados precocemente.", "Lavagem articular (artrocentese e irrigação com SF 0,9% aquecido mais antibiótico) mais antibioticoterapia sistêmica parenteral por 14 a 21 dias (ceftiofur ou ampicilina mais gentamicina) mais AINE sistêmico (flunixin meglumine); prognóstico reservado a grave pela alta probabilidade de sequelas articulares permanentes.", "Corticoterapia de alta potência (dexametasona 0,5 mg/kg/dia por 10 dias) como tratamento exclusivo: a inflamação é o problema principal e deve ser suprimida imediatamente.", "Amputação preventiva do membro afetado antes de confirmar o agente etiológico, pelo alto risco de septicemia sistêmica progressiva."],
+      "correct": 1, "hint": "A infecção dentro de uma articulação destrói a cartilagem pela ação direta das bactérias E das enzimas inflamatórias. Apenas antibiótico sistêmico não alcança concentrações adequadas no líquido sinovial sem a lavagem articular associada.",
+      "explanation": "A artrite séptica neonatal exige abordagem agressiva: a lavagem articular remove bactérias, fibrina e enzimas proteolíticas que destroem a cartilagem articular. A antibioticoterapia sistêmica deve ser de amplo espectro, em altas doses e por longa duração (14–21 dias). O AINE reduz a inflamação e a dor. O prognóstico é reservado pois articulações com processo séptico estabelecido frequentemente evoluem para fibrose, anquilose ou osteomielite.",
+      "funFact": "A concentração de antibióticos no líquido sinovial é geralmente apenas 25 a 50% da concentração sérica, o que explica por que doses usuais frequentemente falham no tratamento da artrite séptica neonatal sem a lavagem articular associada!" },
+
+    { "id": 50103, "station": 5, "species": "Bovinos", "audience": "leigo", "difficulty": 2, "type": "conceitual", "tags": ["cetose", "ben", "alimentacao", "reconhecimento"],
+      "question": "🌿 Como o produtor percebe que o emagrecimento de uma vaca nas primeiras semanas após o parto está passando dos limites e se tornando perigoso?",
+      "options": ["Quando a vaca aumenta o consumo de ração e bebe muito mais água que o normal. Esses sinais indicam metabolismo acelerado e saudável.", "Quando a vaca emagrece visivelmente com costelas salientes, apresenta um odor adocicado no hálito (cheiro de acetona ou maçã verde), fica apática e para de comer. Isso indica que o corpo está queimando gordura em excesso, situação chamada de cetose.", "Quando a vaca produz mais leite que o normal nas primeiras 2 semanas. A hiperprodução indica metabolismo em ótimo funcionamento.", "Quando as fezes ficam muito firmes e secas. Isso indica que o animal está aproveitando toda a energia da ração de forma eficiente."],
+      "correct": 1, "hint": "O corpo da vaca que não tem energia suficiente começa a queimar sua própria gordura. Essa queima produz substâncias com cheiro característico que até os humanos conseguem sentir no hálito do animal.",
+      "explanation": "Quando a vaca gasta mais energia produzindo leite do que consegue ingerir, ela entra em Balanço Energético Negativo (BEN) severo. O corpo queima gordura corporal acumulada de forma acelerada, produzindo corpos cetônicos (como a acetona). O cheiro adocicado no hálito é o sinal clássico de cetose. Se não corrigida com suplementos energéticos (propilenoglicol), a vaca para de comer, cai e pode morrer.",
+      "funFact": "Algumas vacas com cetose subclínica (sem sinais visíveis) têm o leite com sabor e odor de acetona. Se esse leite for misturado ao tanque da fazenda, pode ser percebido pelos consumidores e reprovado pelo laticínio na análise de qualidade!" },
+
+    { "id": 50104, "station": 5, "species": "Bovinos", "audience": "leigo", "difficulty": 1, "type": "conceitual", "tags": ["hipocalcemia", "calcio", "febre_leite", "lactacao"],
+      "question": "🐄 Por que vacas que produzem muito leite podem cair, tremer e ficar paralisadas logo depois do parto, mesmo estando em clima quente e sem infecção?",
+      "options": ["Porque o esforço de produzir muito leite aumenta a temperatura do úbere, causando uma febre localizada que paralisa os músculos.", "Porque a produção intensa de leite retira cálcio do sangue da vaca mais rápido do que o corpo consegue repor. Com cálcio baixo no sangue, os músculos e nervos param de funcionar, causando tremores, fraqueza e queda.", "Porque o leite produzido em grandes quantidades azeda dentro do úbere, gerando toxinas que causam paralisia muscular progressiva.", "Porque vacas que produzem muito leite sempre desenvolvem infecção bacteriana no sangue. Os tremores são sintomas dessa infecção."],
+      "correct": 1, "hint": "O cálcio não serve apenas para ossos. Ele é fundamental para que os músculos se contraiam. Sem ele no sangue na quantidade certa, nem o coração funciona adequadamente.",
+      "explanation": "O leite é riquíssimo em cálcio. No início da lactação, quando a vaca começa a produzir muito leite rapidamente, o cálcio sai do sangue para o úbere muito mais depressa do que o corpo consegue repor da alimentação ou dos ossos. Com cálcio baixo no sangue (hipocalcemia), os músculos perdem a capacidade de se contrair de forma normal, causando fraqueza progressiva, tremores, incapacidade de se levantar e, se não tratada a tempo, parada cardíaca.",
+      "funFact": "A 'Febre do Leite' não causa febre de verdade! Na verdade, a vaca afetada geralmente está com a temperatura corporal abaixo do normal, porque sem cálcio o coração bate mais fraco e os músculos não geram calor suficiente para manter a temperatura!" },
+
+    { "id": 50203, "station": 5, "species": "Bovinos", "audience": "estudante", "difficulty": 3, "type": "interpretacao", "tags": ["cetose_tipo1", "cetose_tipo2", "ben", "lipidose_hepatica"],
+      "question": "Qual a principal diferença fisiopatológica entre a Cetose Tipo I (cetose de subnutrição) e a Cetose Tipo II (cetose da vaca gorda) em bovinos leiteiros?",
+      "options": ["A cetose tipo I ocorre exclusivamente em primíparas magras no pré-parto; a cetose tipo II afeta apenas vacas pluríparas com baixo ECC no pós-parto tardio.", "A cetose tipo I resulta de BEN por insuficiência de ingestão energética em vacas com ECC normal ou baixo, sem lipidose hepática severa; a cetose tipo II origina-se da lipomobilização massiva de tecido adiposo pré-existente em vacas com ECC acima de 3,75 ao parto, com lipidose hepática intensa que compromete a gliconeogênese.", "A cetose tipo I responde exclusivamente ao propilenoglicol VO; a cetose tipo II é indiferente a qualquer precursor glicogênico e exige insulinoterapia intravenosa como tratamento exclusivo.", "Não há distinção clínica ou terapêutica entre cetose tipo I e tipo II; ambas são tratadas de forma idêntica com glicose IV em dose única de 500 mL."],
+      "correct": 1, "hint": "O estado corporal da vaca antes do parto é determinante. Uma vaca magra e uma vaca gorda ao parir terão mecanismos completamente distintos para desenvolver cetose.",
+      "explanation": "Na Cetose Tipo I, o animal tem ECC adequado e desenvolve BEN por incapacidade de ingerir alimento suficiente para cobrir a alta demanda energética da lactação. A lipólise é moderada e o fígado mantém capacidade de gliconeogênese. Responde bem a precursores glicogênicos (propilenoglicol, glicose IV, niacina). Na Cetose Tipo II (vaca gorda), a lipomobilização massiva pré-parto satura o fígado de ácidos graxos não-esterificados (AGNEs), causando lipidose hepática severa que compromete a gliconeogênese. Tem pior prognóstico e responde menos ao tratamento convencional.",
+      "funFact": "Vacas com Cetose Tipo II frequentemente desenvolvem deslocamento de abomaso à esquerda no pós-parto imediato, pois a atonia gastrointestinal causada pela cetose e pela hipocalcemia predispõe mecanicamente ao deslocamento do órgão para o espaço criado pelo útero esvaziado!" },
+
+    { "id": 50204, "station": 5, "species": "Bovinos", "audience": "estudante", "difficulty": 2, "type": "aplicacao", "tags": ["bhb", "cetose_subclinica", "monitoramento", "rebanho"],
+      "question": "Em um programa de monitoramento de cetose subclínica em rebanho leiteiro, qual a meta de prevalência (BHB igual ou maior que 1,2 mmol/L) considerada aceitável internacionalmente na 1ª e 2ª semana pós-parto?",
+      "options": ["Prevalência de até 50% das vacas na 1ª semana é considerada fisiologicamente normal em raças de alta produção como a Holstein.", "Prevalência abaixo de 15% na 1ª semana e abaixo de 10% na 2ª semana pós-parto são as metas de rebanho consideradas excelentes internacionalmente.", "O valor de corte para relevância clínica é BHB igual ou maior que 2,5 mmol/L; o monitoramento abaixo desse limiar não possui impacto produtivo ou reprodutivo documentado.", "A cetose subclínica não impacta métricas produtivas como produção de leite, taxa de concepção ou saúde uterina, sendo monitorada apenas por interesse acadêmico."],
+      "correct": 1, "hint": "A cetose subclínica tem custos econômicos documentados mesmo sem sinais clínicos visíveis. O monitoramento precoce permite intervenção nutricional antes que os problemas se manifestem clinicamente.",
+      "explanation": "Vacas com BHB igual ou maior que 1,2 mmol/L na 1ª e 2ª semana pós-parto apresentam redução de 5 a 15% na produção de leite na lactação, menor taxa de prenhez (até 20% a menos), maior risco de metrite, mastite e deslocamento de abomaso. A meta internacional aceita é prevalência igual ou menor que 15% na 1ª semana e igual ou menor que 10% na 2ª semana. Prevalências acima de 25% indicam falha grave no manejo nutricional do período de transição.",
+      "funFact": "Cada vaca com cetose subclínica gera perda econômica estimada entre US$ 100 e US$ 400 por lactação. Em rebanhos de 200 vacas com 30% de prevalência, isso representa US$ 6.000 a 12.000 em perdas invisíveis por ano — sem nenhum animal sequer cair ou apresentar sinais clínicos!" },
+
+    { "id": 50302, "station": 5, "species": "Bovinos", "audience": "veterinario", "difficulty": 3, "type": "caso_clinico", "tags": ["dae", "ben", "atonia", "hipocalcemia"],
+      "question": "Qual a cadeia fisiopatológica que conecta o Balanço Energético Negativo (BEN) pós-parto ao Deslocamento de Abomaso à Esquerda (DAE) e quais fatores de risco nutricionais pré-parto amplificam essa cadeia?",
+      "options": ["O BEN eleva o pH ruminal, que retroalimenta a motilidade abomasal via reflexo enterorruminal, causando dilatação e deslocamento mecânico lateral esquerdo.", "O BEN induz hipocalcemia subclínica e hipercetonemia, causando atonia da musculatura lisa gastrointestinal. O abomaso hipomotor acumula gás e flutua dorsalmente para o espaço entre o rúmen e a parede abdominal esquerda (espaço criado pelo útero esvaziado). Fatores de risco pré-parto: alto ECC ao parto (acima de 3,75), baixo FDN efetivo na dieta de transição e DCAD excessivamente positivo.", "O deslocamento é causado exclusivamente pelo aumento do volume uterino na gestação gemelar, que empurra mecanicamente o abomaso para a posição lateral esquerda.", "O BEN causa hiperglicemia compensatória que estimula hiperprodução de ácido clorídrico no abomaso, o qual cria bolsas de gás que deslocam o órgão mecanicamente."],
+      "correct": 1, "hint": "Dois eventos simultâneos: um abomaso que não se move (atonia por hipocalcemia e cetonemia) e um espaço que se abre (útero esvaziado). O abomaso com gás precisa ir para algum lugar.",
+      "explanation": "A sequência fisiopatológica: BEN → lipomobilização → hipocalcemia subclínica mais hipercetonemia → atonia abomasal (via inibição do tônus vagal e da musculatura lisa gastrointestinal) → acúmulo de gás no abomaso hipomotor. Simultaneamente, o útero esvaziado pós-parto cria espaço no abdômen esquerdo. O abomaso gasoso flutua para esse espaço, encravando-se entre o rúmen e a parede lateral esquerda (DAE). Os fatores de risco pré-parto amplificadores: ECC acima de 3,75 ao parto, baixo FDN efetivo, DCAD muito positivo e transição abrupta para concentrado.",
+      "funFact": "A omentopexia (correção cirúrgica do DAE com fixação do abomaso à parede abdominal) é a cirurgia de campo mais realizada em rebanhos leiteiros de alta produção no mundo. Um veterinário experiente realiza o procedimento em menos de 40 minutos com o animal em pé sob anestesia local!" },
+
+    { "id": 50303, "station": 5, "species": "Bovinos", "audience": "veterinario", "difficulty": 3, "type": "aplicacao", "tags": ["propilenoglicol", "cetose", "gliconeogenese", "toxicidade"],
+      "question": "O propileno glicol (PG) é amplamente utilizado como precursor glicogênico oral em vacas com cetose. Qual o mecanismo de ação hepático, qual a dose terapêutica recomendada e qual o risco real da superdosagem?",
+      "options": ["O PG é convertido diretamente em IgG no fígado, elevando o sistema imune e a produção de anticorpos. Dose: 500 mL/dia VO. Superdosagem causa apenas diarreia osmótica passageira.", "O PG é absorvido pelo rúmen e convertido no fígado em piruvato e lactato, que entram no ciclo de Krebs como precursores glicogênicos, elevando a glicemia e reduzindo a lipólise. Dose terapêutica: 300 a 500 mL/dia VO (divididos em 2 administrações). Superdosagem (acima de 600 mL/dia) pode causar depressão do SNC, ataxia e acidemia propionato.", "O PG é fermentado pelas bactérias ruminais em ácido propiônico, que compete com o BHB pelos transportadores hepáticos. Dose única de 1 litro é recomendada e não há risco de toxicidade documentado em bovinos.", "O PG age como quelante de corpos cetônicos no sangue, eliminando-os pela urina. A dose de 50 mL/kg é segura e padronizada para todas as raças e categorias de bovinos."],
+      "correct": 1, "hint": "O PG não é diretamente glicose. É um precursor: o fígado converte o PG em moléculas que entram na rota da gliconeogênese. Como qualquer substância, em excesso tem efeito tóxico mensurável.",
+      "explanation": "O propileno glicol (1,2-propanodiol) é absorvido no rúmen e no intestino delgado, convertido no fígado em D-lactato e piruvato, com posterior gliconeogênese. Isso eleva a glicemia e reduz a mobilização de AGNEs via elevação da insulina. A dose padrão de 300–500 mL/dia VO em 2 administrações diárias é eficaz e segura. Doses superiores a 600 mL/dia elevam o propionato sérico e podem causar acidemia, ataxia e depressão do SNC, especialmente em vacas já comprometidas metabolicamente.",
+      "funFact": "O propileno glicol foi originalmente desenvolvido como antifúngico na indústria alimentícia. Sua ação gliconeogênica em bovinos foi descoberta nos anos 1960 e hoje é um dos compostos mais vendidos no mundo para uso em pecuária leiteira — um uso completamente diferente do propósito original!" },
+
+    { "id": 60103, "station": 6, "species": "all", "audience": "leigo", "difficulty": 1, "type": "prevencao", "tags": ["cadeia_frio", "vacina", "armazenamento"],
+      "question": "💉 Por que é tão importante guardar as vacinas na geladeira, em temperatura entre 2°C e 8°C, e nunca deixar congelar?",
+      "options": ["Para que as vacinas mantenham aparência bonita e não percam a cor original. A temperatura não afeta a eficácia do produto.", "Porque as vacinas são feitas de partes de vírus, bactérias ou proteínas delicadas que são destruídas pelo calor excessivo e pelos cristais de gelo do congelamento. Uma vacina mal armazenada parece normal, mas não protege o animal de nada.", "Por ser exigência da vigilância sanitária apenas para fins de rastreabilidade, sem impacto real na eficácia imunológica do produto.", "Porque vacinas aquecidas causam reações alérgicas graves nos animais. O frio evita essas reações e reduz a dor no local de aplicação."],
+      "correct": 1, "hint": "A vacina só funciona porque apresenta ao sistema imune do animal uma versão enfraquecida ou fragmentada do patógeno. Se esse material for destruído pelo calor ou congelamento, não há o que 'ensinar' ao sistema imune.",
+      "explanation": "A 'cadeia de frio' vacinal não é burocracia: é a garantia de que os antígenos (fragmentos de vírus, bactérias ou toxinas purificadas) chegam íntegros ao animal. Temperatura acima de 8°C desnatura proteínas vacinais e inativa vírus atenuados. Temperatura abaixo de 0°C congela os adjuvantes oleosos, separando a emulsão e tornando a vacina ineficaz. Uma vacina mal armazenada parece idêntica à correta — não tem cheiro diferente, não muda de cor — mas simplesmente não funciona.",
+      "funFact": "Estima-se que até 25% das falhas vacinais relatadas a campo no Brasil decorrem de falhas na cadeia de frio durante o transporte ou armazenamento, e não de problemas com a vacina em si. O produtor paga, aplica, mas o animal fica sem proteção!" },
+
+    { "id": 60104, "station": 6, "species": "all", "audience": "leigo", "difficulty": 2, "type": "prevencao", "tags": ["tetano", "umbigo", "vacina", "colostro"],
+      "question": "Por que é tão importante vacinar a mãe contra o tétano antes do parto para proteger o filhote recém-nascido?",
+      "options": ["Porque a vacina da mãe passa diretamente pelo umbigo do filhote durante o parto, imunizando-o naquele exato momento.", "Porque o filhote recebe os anticorpos contra o tétano pelo colostro da mãe vacinada. Com o umbigo aberto nos primeiros dias, há grande risco de entrada da bactéria Clostridium tetani do solo pelo cordão umbilical.", "O tétano não existe mais no Brasil e em toda a América Latina. A vacinação é apenas um protocolo antigo mantido por tradição, sem necessidade real.", "A vacinação da mãe serve somente para protegê-la durante o estresse do parto. Não tem nenhum efeito protetor sobre o filhote nascido."],
+      "correct": 1, "hint": "O umbigo aberto do filhote fica em contato direto com o solo, a cama da baia e as fezes dos outros animais. A bactéria do tétano vive justamente no solo contaminado por fezes.",
+      "explanation": "O Clostridium tetani sobrevive em forma de esporo no solo, especialmente em solos adubados com fezes de animais. O umbigo aberto do filhote é a porta de entrada perfeita. Se a mãe foi vacinada no pré-parto, ela produz altos títulos de anticorpos antitetânicos que se concentram no colostro. O filhote que mama nas primeiras horas absorve esses anticorpos e fica protegido nos primeiros meses — justamente o período em que o umbigo ainda está presente e vulnerável a infecções.",
+      "funFact": "O tétano neonatal em bovinos e ovinos, chamado popularmente de 'mal do sete' (pois os animais afetados geralmente morrem entre o 5º e o 10º dia de vida), ainda causa mortes em fazendas sem protocolo vacinal adequado no Brasil, especialmente no período chuvoso quando a terra está mais contaminada!" },
+
+    { "id": 60202, "station": 6, "species": "Bovinos", "audience": "estudante", "difficulty": 2, "type": "prevencao", "tags": ["vacina_viva", "gestacao", "bvdv", "animal_pi"],
+      "question": "Por que o uso de vacinas vivas modificadas (VVM) em fêmeas bovinas gestantes é uma contraindicação importante em alguns protocolos sanitários?",
+      "options": ["Porque VVMs causam reações anafiláticas severas no feto em qualquer fase gestacional, independentemente da cepa utilizada.", "Porque agentes vacinais atenuados de determinadas VVMs (como o BVDV atenuado) podem cruzar a barreira placentária de bovinos e, se aplicados entre os dias 40 e 120 de gestação, causar infecção fetal com produção de animais Persistentemente Infectados (PI).", "VVMs são completamente seguras em qualquer fase da gestação de bovinos e nunca causam abortamentos nem problemas fetais documentados.", "A contraindicação de VVMs em gestantes se deve exclusivamente ao risco de transmissão por via respiratória para outros animais durante o período pós-vacinação."],
+      "correct": 1, "hint": "Em vacinas vivas modificadas, o agente está vivo (apenas enfraquecido). Em situações específicas de janela gestacional, esse agente pode cruzar a barreira placentária.",
+      "explanation": "As VVMs contra BVDV são o principal exemplo de contraindicação em gestantes. Cepas de BVDV vacinal atenuado têm tropismo pelo tecido fetal bovino e, se aplicadas entre os dias 40–120 de gestação (janela crítica de imunotolerância fetal), podem cruzar a barreira placentária. O sistema imune do feto imaturo não reconhece o vírus como 'estranho' e se torna tolerante a ele, gerando animais Persistentemente Infectados (PI) — que são as principais fontes de manutenção do BVDV no rebanho.",
+      "funFact": "Paradoxalmente, a VACINA contra BVDV pode gerar o mesmo problema que tenta prevenir (animais PI) se aplicada no período errado da gestação! O timing correto da vacinação é tão importante quanto a escolha do produto." },
+
+    { "id": 60203, "station": 6, "species": "all", "audience": "estudante", "difficulty": 2, "type": "aplicacao", "tags": ["anticorpos_maternos", "janela_imunologica", "timing_vacinal"],
+      "question": "Em bezerros e cordeiros que receberam colostro de boa qualidade, qual a janela de vulnerabilidade imunológica e qual o momento mais adequado para iniciar o protocolo vacinal primário?",
+      "options": ["Os anticorpos maternos duram apenas 7 dias. A vacinação primária deve ser iniciada já na 2ª semana de vida para máxima eficácia imunológica.", "Os anticorpos colostrais (IgG) têm meia-vida de aproximadamente 21 dias em bovinos. Entre 2 e 4 meses de vida, os títulos maternos caem a níveis não protetores mas ainda interferentes. A vacinação primária é mais eficaz a partir dos 60 a 90 dias de vida.", "Em animais que receberam colostro de alta qualidade, os anticorpos maternos duram 12 meses. Não há necessidade de vacinação antes de um ano de vida.", "Os anticorpos maternos não interferem na eficácia das vacinas. O calendário vacinal pode iniciar na 1ª semana de vida com total eficácia."],
+      "correct": 1, "hint": "Há um período em que os anticorpos maternos estão baixos o suficiente para não proteger mais contra infecções de campo, mas ainda altos o suficiente para neutralizar os antígenos vacinais. Essa é a janela de vulnerabilidade.",
+      "explanation": "A meia-vida das IgG colostrais em bovinos é de aproximadamente 20–21 dias. Aos 60–90 dias de vida, a maioria dos bezerros já tem títulos maternos insuficientes para proteção clínica. Porém, títulos residuais ainda podem neutralizar antígenos vacinais, especialmente de vacinas inativadas. A vacinação primária após os 60 dias, com reforço 3–4 semanas depois, garante a formação de memória imunológica endógena sem a interferência dos anticorpos maternos.",
+      "funFact": "Em surtos ativos (como febre aftosa), recomenda-se vacinar mesmo animais com anticorpos maternos presentes, pois a resposta imune celular mediada por linfócitos T pode ser parcialmente estimulada mesmo quando a resposta humoral está bloqueada pelos anticorpos maternos!" },
+
+    { "id": 60303, "station": 6, "species": "Bovinos", "audience": "veterinario", "difficulty": 3, "type": "aplicacao", "tags": ["mannheimia", "pneumonia_enzootica", "complexo_respiratorio", "timing_vacinal"],
+      "question": "Ao estruturar protocolo de prevenção de pneumonia enzoótica em bezerros de corte desmamados, qual o papel patogênico da Mannheimia haemolytica e qual o timing ideal de vacinação com bacterina-toxoide?",
+      "options": ["M. haemolytica é agente primário da pneumonia bovina e deve ser vacinada exclusivamente por via nasal na semana do desmame para induzir imunidade local no trato respiratório superior.", "M. haemolytica é agente oportunista que prolifera e secreta leucotoxina (LktA) após infecção viral primária (IBR, BVDV, PI3, BRSV); a vacinação ideal ocorre 3 a 4 semanas antes de eventos estressores (desmame, reagrupamento, transporte) para permitir soroconversão completa antes da exposição ao risco.", "M. haemolytica causa exclusivamente pleurite adesiva sem envolvimento do parênquima pulmonar; a vacinação é indicada somente para animais que já desenvolveram doença clínica prévia.", "A vacina contra M. haemolytica é contraindicada concomitantemente a vacinas virais (IBR/BVDV) por antagonismo imunológico documentado. Os protocolos devem ser separados por no mínimo 60 dias."],
+      "correct": 1, "hint": "Lembre do Complexo Respiratório Bovino (CRB): geralmente vírus primeiro, depois bactérias oportunistas. A M. haemolytica tem uma estratégia específica e devastadora: secreta uma toxina que destrói justamente os leucócitos que defenderiam o pulmão.",
+      "explanation": "O Complexo Respiratório Bovino segue a sequência clássica: infecção viral primária (IBR, BVDV, PI3, BRSV) compromete os mecanismos de defesa pulmonar. A M. haemolytica, colonizadora natural das vias aéreas superiores, prolifera e invade o parênquima, secretando leucotoxina (LktA) que lisa neutrófilos e macrófagos alveolares. A vacinação 3–4 semanas antes do desmame permite soroconversão completa antes do estresse, quando a exposição ao risco é máxima.",
+      "funFact": "A leucotoxina da M. haemolytica pertence à família das RTX toxinas. Ela literalmente 'fura' a membrana dos leucócitos, causando lise celular e liberando conteúdo granular inflamatório que amplifica a lesão pulmonar — um patógeno que usa as defesas do hospedeiro contra ele mesmo!" },
+
+    { "id": 60304, "station": 6, "species": "Ovinos", "audience": "veterinario", "difficulty": 3, "type": "aplicacao", "tags": ["clostridioses", "bacterina_toxoide", "ovinos", "primovacinacao"],
+      "question": "Em rebanho ovino sem histórico de vacinação, você inicia programa com bacterina-toxoide polivalente (7 ou 8 clostrídios). Qual o protocolo correto de primovacinação e reforço em matrizes adultas para garantir colostro com títulos adequados de antitoxinas?",
+      "options": ["Dose única 30 dias antes do parto; os anticorpos vacinais são vitalícios em ovinos adultos e uma única dose é suficiente para toda a vida reprodutiva.", "Primovacinação com 2 doses com intervalo de 28 a 30 dias (D0 e D28–30). Reforço anual: dose única 4 a 6 semanas antes do parto esperado, para maximizar a concentração de antitoxinas no colostro coincidindo com o pico de transferência de IgG para a glândula mamária.", "Três doses com intervalo de 14 dias cada; reforço semestral obrigatório independentemente do período reprodutivo, sem relação com a data do parto prevista.", "Vacinação exclusivamente dos cordeiros a partir de 3 semanas de vida; a imunização das matrizes não oferece proteção colostal relevante contra clostridioses em ovinos."],
+      "correct": 1, "hint": "Animais nunca vacinados precisam de 2 exposições ao antígeno (primovacinação) para estabelecer memória imunológica duradoura. O reforço pré-parto serve para ativar essa memória no momento em que o colostro está sendo produzido.",
+      "explanation": "O protocolo padrão para animais virgens de vacinação exige primovacinação com 2 doses espaçadas 28–30 dias para estabelecer memória imunológica de células B. Nos anos subsequentes, uma dose de reforço 4–6 semanas antes do parto eleva os títulos de IgG antitoxinas justamente quando a glândula mamária está transferindo ativamente imunoglobulinas para o colostro. O resultado é um colostro com altos títulos de antitoxinas contra enterotoxemia (C. perfringens tipos C e D), tétano (C. tetani) e carbúnculo sintomático (C. chauvoei).",
+      "funFact": "Estudos demonstram que cordeiros de matrizes vacinadas no pré-parto têm títulos de antitoxinas clostridiais 10 a 20 vezes maiores aos 30 dias de vida do que cordeiros de matrizes não vacinadas — mesmo quando os cordeiros também recebem vacina individualmente!" },
+
+    { "id": 70102, "station": 7, "species": "all", "audience": "leigo", "difficulty": 1, "type": "conceitual", "tags": ["registros", "gestao", "dados", "manejo"],
+      "question": "📊 Por que é importante o produtor anotar em um caderno ou aplicativo as datas de parto, tratamentos, vacinas e peso dos filhotes nascidos na fazenda?",
+      "options": ["Para cumprir exigências burocráticas do governo. Os registros não têm utilidade prática real no dia a dia da propriedade.", "Porque ter registros permite ao produtor e ao veterinário identificar padrões de problemas (como muitas mortes de filhotes em um mês específico), calcular se a fazenda está lucrativa e tomar decisões corretas de manejo baseadas em fatos — e não em achismo.", "Os registros só importam para fazendas que exportam para o exterior. Para mercado interno brasileiro, são completamente desnecessários.", "Anotar os dados dos animais aumenta a burocracia e atrapalha o trabalho prático dos colaboradores no dia a dia."],
+      "correct": 1, "hint": "Um bom médico registra tudo sobre seus pacientes para acompanhar a evolução e tomar melhores decisões. Um bom produtor faz o mesmo com seus animais. Sem dados, não há como melhorar.",
+      "explanation": "Registros simples como data do parto, peso do filhote ao nascer, se tomou colostro e quando, quais vacinas recebeu, se adoeceu e qual foi o tratamento — formam um histórico valioso. Com esses dados é possível identificar quais vacas têm filhotes mais fracos, em quais meses ocorrem mais doenças, se o protocolo de colostro está funcionando e calcular indicadores como mortalidade neonatal e ganho de peso. Isso transforma a tomada de decisão de intuitiva em baseada em evidências.",
+      "funFact": "Fazendas que usam fichas ou aplicativos de gestão reportam em média 20% a 30% menos perdas de neonatos por ano, simplesmente porque identificam e corrigem problemas antes que se tornem crises devastadoras!" },
+
+    { "id": 70103, "station": 7, "species": "Bovinos", "audience": "leigo", "difficulty": 2, "type": "interpretacao", "tags": ["periodo_servico", "reproducao", "eficiencia", "indicador"],
+      "question": "O que é o 'período de serviço' de uma vaca e como ele afeta diretamente o lucro da fazenda de leite?",
+      "options": ["É o tempo total que a fêmea passa sendo ordenhada durante a lactação. Quanto mais longo esse período, mais leite ela produz e mais lucrativa ela é.", "É o tempo entre o parto e a nova fecundação da vaca. Quanto maior esse intervalo, menos filhotes nascem por ano e menor é a eficiência da fazenda — pois cada vaca precisa parir aproximadamente uma vez por ano para ser rentável.", "É a quantidade de serviços ou trabalhos que o animal presta na fazenda, incluindo transporte e tração animal.", "É o período obrigatório em que a fêmea descansa sem produzir leite antes do próximo parto, chamado popularmente de período seco."],
+      "correct": 1, "hint": "Em gado de leite, queremos que cada vaca produza um filhote por ano. Se ela demorar muito para ficar prenhe novamente após o parto, esse ciclo se alonga e a fazenda perde produção e filhotes.",
+      "explanation": "O Período de Serviço (PS) é o intervalo em dias entre o parto e a concepção seguinte. Em fazendas bem manejadas, busca-se um PS de até 90 dias, o que permite um intervalo entre partos de aproximadamente 365 dias (12 meses). PS maior que 90 dias reduz o número de filhotes por vaca ao ano e diminui a produção de leite vitalícia. Nutrição inadequada no pós-parto, com BEN severo, é a principal causa de PS longo.",
+      "funFact": "Uma vaca com período de serviço de 150 dias (ao invés de 90 dias) produz em média 300 a 400 litros a menos de leite na lactação seguinte. Em um rebanho de 100 vacas, isso pode representar mais de 30.000 litros de leite perdidos por ano — apenas pela fertilidade atrasada!" },
+
+    { "id": 70203, "station": 7, "species": "Bovinos", "audience": "estudante", "difficulty": 2, "type": "calculo", "tags": ["roi", "custo_beneficio", "gestao", "colostragem"],
+      "question": "Um produtor questiona o custo de R$ 8,00 por bezerro para implementar um protocolo completo de colostro (Brix + banco de colostro + sonda esofágica). Com mortalidade atual de 12% e bezerra avaliada em R$ 1.200,00 ao desmame, qual a análise de custo-benefício correta para justificar o investimento?",
+      "options": ["Dizer que o custo emocional de perder animais é suficiente para justificar qualquer investimento, sem a necessidade de calcular o retorno financeiro quantitativamente.", "Calcular: 100 nascimentos × 12% mortalidade = 12 bezerras perdidas (R$ 14.400/ano). Reduzindo para 3% = 3 mortes = 9 bezerras salvas × R$ 1.200 = R$ 10.800 gerados. Custo do protocolo: 100 × R$ 8 = R$ 800. ROI líquido = R$ 10.000 (1.250% de retorno sobre o investimento).", "Afirmar que não é possível calcular ROI de investimentos em prevenção veterinária, pois as variáveis são intrínsecamente imprevisíveis e não quantificáveis.", "Recomendar apenas a sonda esofágica (R$ 2/uso) sem mensuração de qualidade do colostro para reduzir o custo total e manter protocolo mínimo aceitável."],
+      "correct": 1, "hint": "O argumento mais poderoso com produtores tradicionais é sempre o econômico. Coloque em números o custo do protocolo versus o custo das perdas evitáveis — o resultado favorece invariavelmente a prevenção.",
+      "explanation": "Análise de custo-benefício: Perdas atuais = 12 bezerras × R$1.200 = R$14.400/ano. Meta após protocolo (3%) = 3 mortes = R$3.600/ano. Ganho = R$10.800. Custo do protocolo = R$800. Lucro líquido = R$10.000. ROI = (10.000/800) × 100 = 1.250%! Apresentar esse cálculo objetivo transforma o veterinário de 'custo' em 'investimento estratégico' no vocabulário do produtor.",
+      "funFact": "Estudos mostram que cada R$ 1,00 investido em programas de colostragem de qualidade retorna em média R$ 8,00 a R$ 12,00 em bezerra salva, produção de leite futura e eficiência reprodutiva. É um dos melhores ROIs em toda a cadeia da pecuária leiteira!" },
+
+    { "id": 70204, "station": 7, "species": "Bovinos", "audience": "estudante", "difficulty": 2, "type": "interpretacao", "tags": ["indicadores_colostragem", "auditoria", "pst", "brix"],
+      "question": "Você realiza auditoria de qualidade em um bezerreiro com 80 animais. Quais são os três principais Indicadores de Processo que você mensuraria para avaliar a eficácia do protocolo de colostragem?",
+      "options": ["Peso ao nascer por raça, data de nascimento por estação do ano e custo médio de ração por bezerra.", "(1) Prevalência de FTIP por refratometria de PST em bezerras de 2 a 7 dias (meta: abaixo de 15% com PST abaixo de 5,5 g/dL); (2) Percentual de bezerros que receberam colostro nas primeiras 2 horas de vida (meta: acima de 90%); (3) Qualidade do colostro do banco auditada semanalmente por Brix (meta: igual ou maior que 22%).", "Número total de ordenhas diárias das mães, temperatura ambiente no piquete de parição e custo por litro de leite produzido no mês.", "Relação peso/idade das bezerras aos 30 dias de vida; presença de diarreia clínica visível e incidência de pneumonia acima de 60 dias de vida."],
+      "correct": 1, "hint": "Bons indicadores de processo medem o que foi FEITO (tempo, qualidade, volume) e não apenas o resultado final. Os três pilares da colostragem têm indicadores correspondentes mensuráveis.",
+      "explanation": "Os 3 indicadores de processo avaliam cada elo crítico da cadeia: (1) PST por refratometria é o indicador de resultado — mede se a IgG chegou ao sangue (o produto final real do protocolo); (2) porcentagem de bezerros alimentados nas primeiras 2h é o indicador de timing — o mais crítico para absorção por pinocitose; (3) Qualidade do colostro do banco (Brix igual ou maior que 22%) garante que o colostro fornecido tem concentração adequada de IgG. Juntos, esses 3 indicadores identificam exatamente onde o protocolo está falhando.",
+      "funFact": "Fazendas que monitoram esses 3 indicadores mensalmente conseguem manter prevalência de FTIP abaixo de 10% de forma consistente. Fazendas sem monitoramento sistemático raramente ficam abaixo de 25% de FTIP — e frequentemente nem sabem disso!" },
+
+    { "id": 70303, "station": 7, "species": "all", "audience": "veterinario", "difficulty": 3, "type": "caso_clinico", "tags": ["epidemiologia", "surto_diarreia", "auditoria", "causa_raiz"],
+      "question": "Você é acionado para investigar surto de diarreia neonatal com mortalidade de 18% em um bezerreiro nos últimos 30 dias. Qual a sequência metodológica correta de investigação epidemiológica para identificar a causa-raiz?",
+      "options": ["Colher amostras de fezes de 2 animais sintomáticos, enviar ao laboratório e aguardar o resultado antes de qualquer intervenção no manejo ou protocolo.", "(1) Descrever o padrão epidemiológico (faixa etária, curva epidêmica, taxa de ataque por lote); (2) Levantar indicadores de processo (PST recente, timing e volume de colostro, Brix, higiene de equipamentos); (3) Avaliar o ambiente (carga microbiana, higiene de baias, densidade); (4) Coletar amostras para diagnóstico etiológico (fezes de 6 a 8 animais agudos); (5) Correlacionar achados e implementar intervenções priorizadas.", "Prescrever antibioticoterapia em massa para todos os animais do lote e aumentar a ventilação do galpão como medida emergencial, aguardando melhora clínica espontânea.", "Solicitar ao produtor que venda imediatamente todos os animais afetados e desinfetar o galpão com hipoclorito de sódio a 2% antes de qualquer investigação adicional."],
+      "correct": 1, "hint": "Epidemiologia exige método: primeiro descrevemos o problema (quem, quando, onde, com qual intensidade), depois investigamos os determinantes (por quê?) e somente então implementamos soluções baseadas em evidências.",
+      "explanation": "A investigação epidemiológica segue a lógica 'descrever — explicar — intervir'. A curva epidêmica indica se é fonte pontual (pico único = problema específico no protocolo num determinado dia) ou propagada (casos crescentes = falha sistêmica). A correlação entre a faixa etária (1–5 dias = ETEC/hipótese FTIP; 5–15 dias = Crypto/Rota; acima de 3 semanas = Eimeria/Salmonella) com os indicadores de processo permite identificar o gargalo sem aguardar resultado laboratorial.",
+      "funFact": "Estudos demonstram que surtos de diarreia neonatal com pico na 1ª semana de vida têm em mais de 80% dos casos correlação com prevalência de FTIP acima de 25%, confirmando que a colostragem inadequada é o determinante mais comum de vulnerabilidade — e o melhor ponto de intervenção!" },
+
+    { "id": 70304, "station": 7, "species": "all", "audience": "veterinario", "difficulty": 3, "type": "aplicacao", "tags": ["sop", "protocolo_neonatal", "gestao_qualidade", "reproducibilidade"],
+      "question": "Ao implementar um Protocolo Operacional Padrão (POP/SOP) de manejo sanitário neonatal em uma propriedade leiteira, quais os 5 componentes críticos que devem obrigatoriamente constar no documento para garantir reprodutibilidade e eficácia entre colaboradores?",
+      "options": ["Nome do veterinário responsável, CRMV, data de criação do protocolo, assinatura do proprietário e lista de medicamentos permitidos pelo MAPA.", "(1) Protocolo de colostragem (timing, volume, método, Brix e monitoramento por PST); (2) Manejo de umbigo (produto, concentração, técnica de imersão e frequência); (3) Identificação e pesagem ao nascer; (4) Critérios objetivos de triagem clínica diária (temperatura, hidratação, apetite, fezes) com limiares de intervenção definidos; (5) Fluxo de tratamento e escalada de atendimento veterinário (quem trata o quê, até qual ponto de complexidade, quando chamar o veterinário).", "Apenas o protocolo vacinal anual e a lista de produtos autorizados pela ANVISA para uso em alimentos de origem animal.", "Planilha de custos mensais do bezerreiro, metas financeiras de mortalidade aceitável e critérios de descarte antecipado de animais não lucrativos."],
+      "correct": 1, "hint": "Um bom POP permite que qualquer colaborador treinado execute o protocolo com a mesma qualidade, independentemente de quem esteja de plantão. Os 5 componentes cobrem os pilares de sobrevivência neonatal — não a burocracia.",
+      "explanation": "Um SOP eficaz de manejo neonatal deve cobrir os 5 pilares fundamentais: (1) Colostragem (o fator protetor de maior impacto), com critérios objetivos mensuráveis (Brix, PST, tempo abaixo de 2h); (2) Higiene do umbigo (previne onfalite e artrite séptica); (3) Identificação e pesagem (rastreabilidade e monitoramento de crescimento); (4) Triagem clínica diária com critérios objetivos — elimina a variabilidade de avaliação entre colaboradores; (5) Fluxo de tratamento claro (define o que cada colaborador faz e quando o veterinário deve ser acionado, evitando mortes por atraso de decisão).",
+      "funFact": "Um estudo conduzido em 50 fazendas leiteiras americanas demonstrou que propriedades com SOP formal de bezerreiro tinham mortalidade 40% menor do que propriedades sem protocolo escrito — mesmo quando comparadas por tamanho do rebanho, raça e localização geográfica!" }
+];
+
+CAMPUS_LIVES_QUIZ_DATABASE.push(...NOVAS_QUESTOES);
+
 Object.freeze(CAMPUS_LIVES_QUIZ_DATABASE);
 
 /* ==========================================================================
@@ -441,13 +743,29 @@ function getQuestionsForProfile(stationId, species, audience) {
     exactMatch.sort(() => Math.random() - 0.5);
     others.sort(() => Math.random() - 0.5);
 
-    // Se há questões suficientes do perfil exato, usa somente elas
+    // Seleciona 3 questões priorizando diversidade de 'type' (conceitual, aplicacao, caso_clinico…)
+    function selectWithTypeDiversity(candidates, count) {
+        const typesSeen = new Set();
+        const diverse = [];
+        const extras = [];
+        candidates.forEach(q => {
+            if (diverse.length < count && !typesSeen.has(q.type)) {
+                typesSeen.add(q.type);
+                diverse.push(q);
+            } else {
+                extras.push(q);
+            }
+        });
+        const combined = [...diverse, ...extras];
+        return combined.slice(0, count);
+    }
+
+    // Se há questões suficientes do perfil exato, usa somente elas (com diversidade de tipo)
     if (exactMatch.length >= 3) {
-        return exactMatch.slice(0, 3);
+        return selectWithTypeDiversity(exactMatch, 3);
     }
 
     // Se há ao menos 1 questão exata, prioriza-as e preenche restante com outras
-    // (banco incompleto — mistura é inevitável, mantém coerência máxima possível)
     if (exactMatch.length > 0) {
         let selection = [...exactMatch];
         for (const q of others) {
@@ -675,7 +993,10 @@ function startQuiz() {
 
 function startQuestionTimer() {
     if (questionTimerRef) clearInterval(questionTimerRef);
-    let timeLeft = 30;
+    // Tempo adaptativo: dificuldade 1 = 30s, 2 = 38s, 3 = 50s
+    const diffTime = { 1: 30, 2: 38, 3: 50 };
+    let timeLeft = diffTime[G.currentQ ? G.currentQ.difficulty : 1] || 30;
+    const totalTime = timeLeft;
     const bar = document.getElementById('quiz-timer');
     if (!bar) return;
     bar.style.width = '100%';
@@ -685,7 +1006,7 @@ function startQuestionTimer() {
     questionTimerRef = setInterval(() => {
         if (G.answered) { clearInterval(questionTimerRef); return; }
         timeLeft--;
-        const pct = (timeLeft / 30) * 100;
+        const pct = (timeLeft / totalTime) * 100;
         bar.style.transition = 'width 1s linear, background 0.5s';
         bar.style.width = pct + '%';
         if (pct < 30) bar.style.background = 'var(--red)';
@@ -705,7 +1026,7 @@ function startQuestionTimer() {
                 document.getElementById('feedback-title').style.color = 'var(--amber)';
                 document.getElementById('feedback-desc').textContent = G.currentQ.explanation;
                 document.getElementById('feedback-consequence').className = 'feedback-consequence lose';
-                document.getElementById('feedback-consequence').textContent = 'Tempo esgotado. A resposta correta foi revelada.';
+                document.getElementById('feedback-consequence').textContent = '⏱️ Tempo esgotado! −1 coração e −4% sobrevivência. A resposta correta foi revelada.';
                 document.getElementById('feedback-mentor').style.display = 'none';
                 fbBox.classList.add('show');
                 G.hearts = Math.max(0, G.hearts - 1);
@@ -824,6 +1145,7 @@ function useHint() {
             if(hintDots[G.hintStep]) hintDots[G.hintStep].classList.add('used');
             
             G.hintStep++;
+            playSound('hint');
             // Bug #10: disable button when all hints are exhausted
             if (G.hintStep >= hints.length && hintBtn) {
                 hintBtn.disabled = true;
@@ -888,7 +1210,8 @@ function selectAnswer(idx, btn) {
         G.survival = Math.max(0, G.survival - survPenalty);
         q.tags.forEach(t => G.stats.missesByTag[t] = (G.stats.missesByTag[t] || 0) + 1);
 
-        if (q.tags.includes('colostro') || q.tags.includes('imunidade')) {
+        const COLOSTRO_TAGS = ['colostro','imunidade','imunidade_passiva','ftip','ftpi','pst','brix','igg1','igg2','sonda_esofagica','qualidade_colostro','pasteurizacao','johne','plasma_oral','alternativa_colostro','protocolo_colostragem','indicadores_colostragem'];
+        if (q.tags.some(t => COLOSTRO_TAGS.includes(t))) {
             G.stats.colostrumFails++;
         }
 
@@ -912,9 +1235,19 @@ function selectAnswer(idx, btn) {
     title.textContent = isCorrect ? '✓ Excelente Decisão!' : '✗ Revisão Necessária!';
     title.style.color = isCorrect ? 'var(--green2)' : 'var(--red)';
     desc.textContent = q.explanation;
+
+    // Auto-scroll para o feedback no mobile após animação
+    setTimeout(() => {
+        const quizScreen = document.getElementById('screen-quiz');
+        if (quizScreen && fbBox) {
+            fbBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+    }, 150);
     
-    const winText = q.consequence ? q.consequence.win : '❤️ Efeito positivo na sobrevivência. (+5%)';
-    const loseText = q.consequence ? q.consequence.lose : '⚠️ Prejuízo à saúde do rebanho. (-12%)';
+    const survGain = 8;
+    const survLoss = G.audience === 'leigo' ? 6 : 8;
+    const winText = q.consequence ? q.consequence.win : `✅ Decisão correta! Sobrevivência do rebanho aumentou (+${survGain}%).`;
+    const loseText = q.consequence ? q.consequence.lose : `⚠️ Decisão equivocada. Sobrevivência do rebanho caiu (−${survLoss}%).`;
 
     consq.className = 'feedback-consequence ' + (isCorrect ? 'win' : 'lose');
     consq.textContent = isCorrect ? winText : loseText;
@@ -927,6 +1260,7 @@ function selectAnswer(idx, btn) {
     }
 
     updateHUD();
+    saveCheckpoint();
     
     document.getElementById('btn-next').onclick = () => {
         const stId = STATIONS[G.stationIdx].id;
@@ -1391,6 +1725,7 @@ function processMinigameResult(isWin, message, color, titleText) {
 
 function finishMinigame() {
     if (mgTimerRef) { clearInterval(mgTimerRef); mgTimerRef = null; }
+    G.activeMinigame = null;
     switchScreen('screen-quiz');
     nextQuestion();
 }
@@ -1455,12 +1790,133 @@ function showReport() {
     document.getElementById('rep-hits').textContent = `${G.stationHits}/${stationQuestions.length}`;
     document.getElementById('rep-survival').textContent = `${Math.round(G.survival)}%`;
     
+    // Mapa de tags internas para rótulos legíveis em português
+    const TAG_LABELS = {
+        // Estação 1
+        gestacao:'Gestação e Reprodução', tempo:'Período Gestacional', biologia:'Biologia Animal',
+        alimentacao:'Alimentação e Nutrição', gordura:'Condição Corporal (ECC)', manejo:'Manejo da Propriedade',
+        ovelha:'Manejo de Ovinos', gemeos:'Gestação Gemelar', energia:'Balanço Energético',
+        maternidade:'Área de Maternidade', limpeza:'Higiene da Maternidade', parto:'Manejo do Parto',
+        ecc:'Escore de Condição Corporal', nutricao:'Nutrição Animal', peripartal:'Período Periparto',
+        fisiologia:'Fisiologia Veterinária', metabolismo:'Metabolismo Animal',
+        anestro:'Anestro e Reprodução', dietas_anionicas:'Dietas Aniônicas (DCAD)', minerais:'Suplementação Mineral',
+        periodo_transicao:'Período de Transição', far_off:'Fase Far-Off', close_up:'Fase Close-Up',
+        cetose:'Cetose Neonatal/Puerperal', bhb:'Beta-Hidroxibutirato (BHB)', monitoramento:'Monitoramento Clínico',
+        pre_parto:'Manejo Pré-Parto', dcad:'DCAD e Sais Aniônicos', sais_anionicos:'Sais Aniônicos',
+        pH_urinario:'pH Urinário', hipocalcemia:'Hipocalcemia', distócia:'Distócia e Obstetrícia',
+        obstetrica:'Manobras Obstétricas', manobra:'Obstetrícia a Campo', cesarea:'Cesariana Bovina',
+        emergencia:'Emergências a Campo', sinais:'Sinais Clínicos',
+        // Estação 2
+        colostro:'Protocolo de Colostro', ftip:'FTIP — Falha de Imunidade Passiva',
+        ftpi:'FTIP — Falha de Imunidade Passiva', imunidade:'Imunidade Neonatal',
+        imunidade_passiva:'Transferência de Imunidade Passiva', pst:'PST — Proteína Sérica Total',
+        brix:'Refratometria de Brix', igg1:'IgG1 — Imunoglobulina Bovina', igg2:'IgG2 — Imunoglobulina Bovina',
+        sonda_esofagica:'Sonda Esofágica (Bezerro Fraco)', mamadeira:'Alimentação com Mamadeira',
+        bezerro_fraco:'Manejo do Bezerro Fraco', qualidade_colostro:'Qualidade do Colostro',
+        mae:'Manejo da Matriz', pasteurizacao:'Pasteurização de Colostro (LTLT)',
+        johne:'Doença de Johne / Paratuberculose', mycobacterium:'Mycobacterium paratuberculosis',
+        biosseguridade:'Biosseguridade do Bezerreiro', plasma_oral:'Plasma Oral como Alternativa',
+        alternativa_colostro:'Alternativas ao Colostro', auditoria:'Auditoria de Bezerreiro',
+        protocolo_colostragem:'Protocolo de Colostragem (5 Pilares)', indicadores_colostragem:'Indicadores de Colostragem',
+        // Estação 3
+        hipotermia:'Hipotermia Neonatal', frio:'Prevenção do Frio', termogenese:'Termogênese Neonatal',
+        gordura_marrom:'Tecido Adiposo Marrom (TAM)', glicose:'Glicose Intraperitoneal',
+        intraperitoneal:'Via Intraperitoneal', afterdrop:'Fenômeno de Afterdrop',
+        reaquecimento_gradual:'Reaquecimento Gradual', fluidoterapia:'Fluidoterapia Neonatal',
+        lampada_infravermelha:'Lâmpada Infravermelha (Abrigo)', abrigo:'Abrigo para Neonatos',
+        prevencao_frio:'Prevenção de Hipotermia', temperatura_normal:'Temperatura Retal Normal',
+        termometro:'Uso de Termômetro a Campo', classificacao_hipotermia:'Classificação Clínica da Hipotermia',
+        protocolo_clinico:'Protocolo Clínico de Campo', hipoglicemia:'Hipoglicemia Neonatal',
+        // Estação 4
+        umbigo:'Cura e Higiene do Umbigo', onfalite:'Onfalite e Complicações',
+        artrite_septica:'Artrite Séptica Neonatal', junta_boba:'Artrite Séptica (Junta Boba)',
+        iodo:'Solução de Iodo a 10%', higiene_baia:'Higiene da Baia de Parto',
+        pressao_infecciosa:'Pressão de Infecção Ambiental', diarreia:'Diarreia Neonatal',
+        etiologia:'Diagnóstico Etiológico', ecoli:'E. coli Enterotoxigênica (ETEC K99)',
+        faixa_etaria:'Diagnóstico por Faixa Etária', clostridiose:'Clostridiose Neonatal',
+        clostridium_perfringens:'C. perfringens Tipo C', enterite_hemorragica:'Enterite Hemorrágica',
+        contaminacao_colostro:'Contaminação Bacteriana do Colostro', bacterias:'Carga Bacteriana',
+        lavagem_articular:'Lavagem Articular Séptica', antibioticoterapia:'Antibioticoterapia Neonatal',
+        prognostico:'Prognóstico Clínico', septicemia:'Septicemia Neonatal',
+        // Estação 5
+        ben:'Balanço Energético Negativo (BEN)', febre_leite:'Febre do Leite (Hipocalcemia)',
+        calcio:'Cálcio e Metabolismo Mineral', lactacao:'Nutrição na Lactação',
+        cetose_tipo1:'Cetose Tipo I (Subnutrição)', cetose_tipo2:'Cetose Tipo II (Vaca Gorda)',
+        lipidose_hepatica:'Lipidose Hepática', cetose_subclinica:'Cetose Subclínica',
+        rebanho:'Monitoramento de Rebanho', dae:'Deslocamento de Abomaso à Esquerda',
+        atonia:'Atonia do Abomaso', propilenoglicol:'Propileno Glicol (Precursor Glicogênico)',
+        gliconeogenese:'Gliconeogênese Hepática', toxicidade:'Toxicidade por Superdosagem',
+        reconhecimento:'Reconhecimento de Doenças Metabólicas', alimentacao_vaca:'Alimentação da Vaca em Lactação',
+        // Estação 6
+        vacina:'Vacinação e Imunoprofilaxia', cadeia_frio:'Cadeia de Frio Vacinal',
+        armazenamento:'Armazenamento de Vacinas', tetano:'Tétano Neonatal (Mal do Sete)',
+        vacina_viva:'Vacinas Vivas Modificadas (VVM)', gestacao:'Vacinação em Gestantes',
+        bvdv:'BVDV e Animais Persistentemente Infectados', animal_pi:'Animal PI (BVDV)',
+        anticorpos_maternos:'Anticorpos Colostrais Maternos', janela_imunologica:'Janela de Vulnerabilidade Imunológica',
+        timing_vacinal:'Timing do Calendário Vacinal', mannheimia:'Mannheimia haemolytica (CRB)',
+        complexo_respiratorio:'Complexo Respiratório Bovino (CRB)', pneumonia_enzootica:'Pneumonia Enzoótica',
+        clostridioses:'Clostridioses em Ovinos', bacterina_toxoide:'Bacterina-Toxoide Polivalente',
+        primovacinacao:'Primovacinação em Virgens',
+        // Estação 7
+        registros:'Registros e Fichas da Fazenda', gestao:'Gestão da Propriedade Rural',
+        dados:'Tomada de Decisão Baseada em Dados', periodo_servico:'Período de Serviço e Fertilidade',
+        reproducao:'Eficiência Reprodutiva do Rebanho', eficiencia:'Eficiência Produtiva',
+        indicador:'Indicadores Zootécnicos', roi:'ROI de Intervenções Veterinárias',
+        custo_beneficio:'Análise de Custo-Benefício', colostragem:'Protocolo de Colostragem',
+        sop:'POP/SOP de Manejo Neonatal', protocolo_neonatal:'Protocolo Neonatal Padronizado',
+        gestao_qualidade:'Gestão da Qualidade do Bezerreiro', reproducibilidade:'Reprodutibilidade de Protocolos',
+        epidemiologia:'Investigação Epidemiológica', surto_diarreia:'Surto de Diarreia Neonatal',
+        causa_raiz:'Análise de Causa-Raiz', tmn:'Taxa de Mortalidade Neonatal (TMN)',
+        curva_de_mortalidade:'Curva de Mortalidade Neonatal'
+    };
+
     const learnings = document.getElementById('rep-learnings');
     learnings.innerHTML = '';
+
+    const mastered = [];
+    const toReview = [];
+
     G.stationTags.forEach(t => {
-        const li = document.createElement('li'); li.textContent = `Conceitos de ${t}`;
-        learnings.appendChild(li);
+        const hits   = G.stats.hitsByTag[t] || 0;
+        const misses = G.stats.missesByTag[t] || 0;
+        const label  = TAG_LABELS[t] || t.replace(/_/g, ' ');
+        if (misses > 0) toReview.push(label);
+        else if (hits > 0) mastered.push(label);
+        else toReview.push(label); // tag visto, mas não respondido (context only)
     });
+
+    if (mastered.length > 0) {
+        const header = document.createElement('li');
+        header.style.cssText = 'list-style:none; font-weight:800; color:var(--green2); font-size:0.8rem; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:4px; margin-top:4px;';
+        header.textContent = '✅ Dominado';
+        learnings.appendChild(header);
+        mastered.forEach(label => {
+            const li = document.createElement('li');
+            li.textContent = label;
+            li.style.cssText = 'color:var(--green2);';
+            learnings.appendChild(li);
+        });
+    }
+
+    if (toReview.length > 0) {
+        const header = document.createElement('li');
+        header.style.cssText = 'list-style:none; font-weight:800; color:var(--amber); font-size:0.8rem; text-transform:uppercase; letter-spacing:0.5px; margin-bottom:4px; margin-top:8px;';
+        header.textContent = '📖 Revisar';
+        learnings.appendChild(header);
+        toReview.forEach(label => {
+            const li = document.createElement('li');
+            li.textContent = label;
+            li.style.cssText = 'color:var(--amber);';
+            learnings.appendChild(li);
+        });
+    }
+
+    if (mastered.length === 0 && toReview.length === 0) {
+        const li = document.createElement('li');
+        li.textContent = 'Nenhum dado de aprendizado coletado nesta etapa.';
+        li.style.color = 'var(--text2)';
+        learnings.appendChild(li);
+    }
 
     document.getElementById('rep-vet').textContent =
         getVetTip(G.stationIdx, G.audience, G.stationHits, stationQuestions.length);
@@ -1689,16 +2145,21 @@ function showFinal() {
         histHTML += `<li style="margin-bottom:4px; color:var(--red);">⚠️ Perdeu <strong>${lost} animais</strong> devido a falhas de protocolo.</li>`;
     }
     
-    if ((G.stats.hitsByTag['hipotermia'] || 0) > 0 || (G.stats.hitsByTag['frio'] || 0) > 0 || G.stats.hypothermiaSaved > 0) {
+    const COLOSTRO_HITS_TAGS = ['colostro','imunidade_passiva','ftip','pst','brix','igg1','igg2','sonda_esofagica','qualidade_colostro','pasteurizacao','plasma_oral','protocolo_colostragem','indicadores_colostragem'];
+    const COLOSTRO_MISS_TAGS  = [...COLOSTRO_HITS_TAGS, 'ftpi'];
+    const HIPOTERMIA_TAGS     = ['hipotermia','frio','termogenese','gordura_marrom','glicose','intraperitoneal','afterdrop','reaquecimento_gradual','fluidoterapia','lampada_infravermelha','abrigo','prevencao_frio','temperatura_normal'];
+    const VACINA_TAGS         = ['vacina','vacina_viva','imunologia','anticorpos_maternos','janela_imunologica','timing_vacinal','cadeia_frio','tetano','bvdv','animal_pi','mannheimia','complexo_respiratorio','clostridioses','bacterina_toxoide','primovacinacao'];
+
+    if (HIPOTERMIA_TAGS.some(t => (G.stats.hitsByTag[t] || 0) > 0) || G.stats.hypothermiaSaved > 0) {
         const savedCount = G.stats.hypothermiaSaved > 0 ? ` (${G.stats.hypothermiaSaved} cordeiro${G.stats.hypothermiaSaved > 1 ? 's' : ''} salvo${G.stats.hypothermiaSaved > 1 ? 's' : ''} com glicose IP)` : '';
         histHTML += `<li style="margin-bottom:4px;">✔️ Agiu rápido e reverteu quadros de choque térmico${savedCount}.</li>`;
     }
-    if (G.stats.colostrumFails > 0 || (G.stats.missesByTag['colostro'] || 0) > 0) {
-        histHTML += `<li style="margin-bottom:4px; color:var(--amber);">⚠️ Falhou na janela de ouro do colostro, gerando risco de FTPI.</li>`;
-    } else if ((G.stats.hitsByTag['colostro'] || 0) > 0) {
+    if (COLOSTRO_MISS_TAGS.some(t => (G.stats.missesByTag[t] || 0) > 0) || G.stats.colostrumFails > 0) {
+        histHTML += `<li style="margin-bottom:4px; color:var(--amber);">⚠️ Falhou na janela de ouro do colostro, gerando risco de FTIP.</li>`;
+    } else if (COLOSTRO_HITS_TAGS.some(t => (G.stats.hitsByTag[t] || 0) > 0)) {
         histHTML += `<li style="margin-bottom:4px;">✔️ Fez excelente gestão do banco de colostro e imunidade passiva.</li>`;
     }
-    if ((G.stats.missesByTag['vacina'] || 0) > 0) {
+    if (VACINA_TAGS.some(t => (G.stats.missesByTag[t] || 0) > 0)) {
         histHTML += `<li style="margin-bottom:4px; color:var(--amber);">⚠️ Cometeu erros graves no protocolo de imunização.</li>`;
     }
     
@@ -1731,12 +2192,35 @@ function generateTutorAnalysis(survival, weakTags) {
         
         topWeaknesses.forEach(tag => {
             let recommendation = "";
-            if (tag.includes('colostro') || tag.includes('ftpi') || tag.includes('imunidade')) recommendation = "Revisar a fisiologia da absorção de imunoglobulinas (IgG) e o tempo de fechamento intestinal (Janela de 24h).";
-            else if (tag.includes('umbigo') || tag.includes('onfalite')) recommendation = "Estudar anatomia das estruturas umbilicais e a ação antisséptica e secante do Iodo 10%.";
-            else if (tag.includes('frio') || tag.includes('hipotermia')) recommendation = "Revisar o catabolismo da Gordura Marrom em neonatos e os protocolos de aquecimento / injeção de glicose.";
-            else if (tag.includes('vacina') || tag.includes('imunologia')) recommendation = "Revisar os conceitos de imunidade passiva vs ativa e a janela de vulnerabilidade imunológica.";
-            else recommendation = `Pesquisar mais sobre protocolos e manejo relacionados a: <strong>${tag}</strong>.`;
-            
+            if (tag.includes('colostro') || tag.includes('ftip') || tag.includes('ftpi') || tag.includes('imunidade_passiva')) {
+                recommendation = "Revisar a fisiologia da absorção de imunoglobulinas (IgG), o tempo de fechamento intestinal neonatal (janela de 24h) e os critérios de PST por refratometria (meta ≥ 5,5 g/dL).";
+            } else if (tag.includes('umbigo') || tag.includes('onfalite') || tag.includes('artrite_septica') || tag.includes('iodo')) {
+                recommendation = "Estudar a anatomia das estruturas umbilicais (veia, artérias, úraco) e a técnica correta de imersão em iodo 10%, incluindo frequência e consequências da onfaloflebite.";
+            } else if (tag.includes('frio') || tag.includes('hipotermia') || tag.includes('gordura_marrom') || tag.includes('termogenese')) {
+                recommendation = "Revisar o catabolismo do Tecido Adiposo Marrom (TAM) em neonatos, a classificação clínica da hipotermia por grau de severidade e o protocolo de glicose intraperitoneal em hipotermia severa.";
+            } else if (tag.includes('glicose') || tag.includes('hipoglicemia') || tag.includes('intraperitoneal')) {
+                recommendation = "Aprofundar o protocolo de glicose IP em cordeiros: ponto anatômico de aplicação, dose (10 mL/kg de glicose 20% morna a 38-39°C) e sequência obrigatória antes do reaquecimento externo.";
+            } else if (tag.includes('vacina') || tag.includes('imunologia') || tag.includes('anticorpos_maternos') || tag.includes('janela_imunologica')) {
+                recommendation = "Revisar os conceitos de imunidade passiva vs. ativa, a 'Janela de Vulnerabilidade Imunológica' (2-4 meses) e as contraindicações de VVMs em fêmeas gestantes (risco de animais PI por BVDV).";
+            } else if (tag.includes('diarreia') || tag.includes('etiologia') || tag.includes('reidratacao') || tag.includes('acidose')) {
+                recommendation = "Estudar o diagnóstico diferencial das diarreias neonatais por faixa etária (ETEC K99 < 5 dias, Crypto/Rota 5-15 dias, Eimeria > 3 sem.) e os critérios de fluidoterapia IV em acidose metabólica severa.";
+            } else if (tag.includes('septicemia') || tag.includes('meningite') || tag.includes('clostridiose') || tag.includes('artrite')) {
+                recommendation = "Aprofundar o diagnóstico e tratamento de septicemia neonatal com envolvimento articular e do SNC, e o protocolo de bacterinas polivalentes de clostrídios no pré-parto materno.";
+            } else if (tag.includes('ben') || tag.includes('cetose') || tag.includes('bhb') || tag.includes('propilenoglicol')) {
+                recommendation = "Revisar a fisiopatologia do BEN no pós-parto, as diferenças entre cetose tipo I e II, o monitoramento de BHB a campo (meta < 1,2 mmol/L) e o mecanismo gliconeogênico do propilenoglicol.";
+            } else if (tag.includes('calcio') || tag.includes('hipocalcemia') || tag.includes('dcad') || tag.includes('pH_urinario')) {
+                recommendation = "Estudar o protocolo de dietas aniônicas (DCAD negativo), monitoramento por pH urinário (meta 6,0-6,8 em raças europeias) e o protocolo de gluconato de cálcio IV em hipocalcemia clínica.";
+            } else if (tag.includes('rumen') || tag.includes('sara') || tag.includes('lactacao') || tag.includes('fibra')) {
+                recommendation = "Revisar a fisiologia da fermentação ruminal, os riscos da SARA por excesso de concentrado no pós-parto imediato e a importância da FDN efetivo para a saúde do rúmen e gordura do leite.";
+            } else if (tag.includes('tmn') || tag.includes('roi') || tag.includes('indicador') || tag.includes('epidemiologia')) {
+                recommendation = "Praticar o cálculo de Taxa de Mortalidade Neonatal (TMN), análise de custo-benefício de intervenções veterinárias (ROI) e a metodologia de investigação epidemiológica de surtos neonatais.";
+            } else if (tag.includes('periodo_transicao') || tag.includes('far_off') || tag.includes('close_up')) {
+                recommendation = "Aprofundar as estratégias nutricionais das fases far-off e close-up do período de transição de bovinos leiteiros e sua relação com o BEN pós-parto.";
+            } else if (tag.includes('colostro') || tag.includes('pst') || tag.includes('brix')) {
+                recommendation = "Revisar os critérios de qualidade de colostro por refratometria de Brix (meta ≥ 22%), a mensuração de PST em bezerros de 2-7 dias (meta ≥ 5,5 g/dL) e os 5 pilares do protocolo de colostragem.";
+            } else {
+                recommendation = `Pesquisar protocolos e manejo relacionados ao tema: <strong>${tag}</strong>.`;
+            }
             recEl.innerHTML += `<li>${recommendation}</li>`;
         });
     }
@@ -1764,11 +2248,15 @@ function saveCheckpoint() {
         hearts: G.hearts,
         survival: G.survival,
         stationIdx: G.stationIdx,
+        questionIdx: G.questionIdx,
+        streak: G.streak,
         stats: G.stats,
+        dotHistory: G.dotHistory || [],
         mgIodoDone: G.mgIodoDone,
         mgColostroDone: G.mgColostroDone,
         mgHipoDone: G.mgHipoDone,
         mgDietaDone: G.mgDietaDone,
+        mgFeedingDone: G.mgFeedingDone,
         savedAt: Date.now()
     };
     localStorage.setItem('vidasDoCampoCheckpoint', JSON.stringify(checkpoint));
@@ -1778,7 +2266,7 @@ function loadCheckpoint() {
     const raw = localStorage.getItem('vidasDoCampoCheckpoint');
     if (!raw) return null;
     const cp = JSON.parse(raw);
-    if (Date.now() - cp.savedAt > 7200000) {
+    if (Date.now() - cp.savedAt > 86400000) {
         localStorage.removeItem('vidasDoCampoCheckpoint');
         return null;
     }
@@ -1798,11 +2286,13 @@ function restoreFromCheckpoint(cp) {
     G.hearts = cp.hearts;
     G.survival = cp.survival;
     G.stationIdx = cp.stationIdx;
-    G.stats = cp.stats;
+    G.streak = cp.streak || 0;
+    G.stats = cp.stats || { hitsByTag: {}, missesByTag: {}, hypothermiaSaved: 0, colostrumFails: 0 };
     G.mgIodoDone = cp.mgIodoDone;
     G.mgColostroDone = cp.mgColostroDone;
     G.mgHipoDone = cp.mgHipoDone;
     G.mgDietaDone = cp.mgDietaDone;
+    G.mgFeedingDone = cp.mgFeedingDone || false;
 }
 
 function resumeGame() {
@@ -1819,7 +2309,20 @@ function resumeGame() {
         const s = (elapsed % 60).toString().padStart(2, '0');
         document.getElementById('hud-timer').textContent = m + ':' + s;
     }, 1000);
-    loadStation();
+
+    // Se havia progresso dentro da estação, pula a intro e vai direto para a pergunta correta
+    const savedQuestionIdx = cp.questionIdx || 0;
+    if (savedQuestionIdx > 0) {
+        const stId = STATIONS[G.stationIdx].id;
+        stationQuestions = getQuestionsForProfile(stId, G.species, G.audience);
+        G.questionIdx = Math.min(savedQuestionIdx, stationQuestions.length - 1);
+        G.dotHistory = cp.dotHistory || [];
+        updateHUD();
+        renderQuestion();
+        switchScreen('screen-quiz');
+    } else {
+        loadStation();
+    }
 }
 
 function dismissCheckpoint() {
@@ -1955,6 +2458,18 @@ function playSound(type) {
             osc.start(now + i * 0.12);
             osc.stop(now + i * 0.12 + 0.3);
         });
+    } else if (type === 'hint') {
+        const osc = ctx.createOscillator();
+        const g = ctx.createGain();
+        osc.connect(g); g.connect(ctx.destination);
+        osc.type = 'sine';
+        osc.frequency.setValueAtTime(660, now);
+        osc.frequency.linearRampToValueAtTime(880, now + 0.12);
+        g.gain.setValueAtTime(0, now);
+        g.gain.linearRampToValueAtTime(0.12, now + 0.04);
+        g.gain.exponentialRampToValueAtTime(0.001, now + 0.25);
+        osc.start(now);
+        osc.stop(now + 0.28);
     } else if (type === 'minigame_start') {
         const notes = [392, 523, 659, 523, 659, 784];
         notes.forEach((freq, i) => {
@@ -2013,7 +2528,7 @@ function toggleDayNight() {
     if (isNight) {
         bg.classList.add('night');
         screen.classList.add('night-text');
-        btn.textContent = '🌙';
+        btn.textContent = '☀️';
         if (sun) { sun.style.opacity = '0'; sun.style.animation = 'none'; }
         if (moon) moon.style.opacity = '1';
         if (stars) stars.querySelectorAll('.splash-star').forEach(s => {
@@ -2023,7 +2538,7 @@ function toggleDayNight() {
     } else {
         bg.classList.remove('night');
         screen.classList.remove('night-text');
-        btn.textContent = '☀️';
+        btn.textContent = '🌙';
         if (sun) { sun.style.opacity = ''; sun.style.animation = 'sunPulse 3s ease-in-out infinite'; }
         if (moon) moon.style.opacity = '0';
         if (stars) stars.querySelectorAll('.splash-star').forEach(s => {
