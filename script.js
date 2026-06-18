@@ -21,9 +21,6 @@ const G = {
     mgFeedingDone: false
 };
 
-const HINT_COST = 25;
-let questionTimerRef = null;
-
 /* ───────────────────────────────────────
    MOTOR NARRATIVO (Personagens e Rotina)
 ─────────────────────────────────────── */
@@ -3080,6 +3077,7 @@ function nextStation() {
 
 function triggerGameOver(lastExplanation) {
     clearCheckpoint();
+    saveToRanking(G.score, Math.round(G.survival));
     clearInterval(G.timerRef);
     
     const visualEl = document.getElementById('final-farm-visual');
@@ -3465,73 +3463,88 @@ function calcMedalCount() {
     return count;
 }
 
+const firebaseConfig = {
+  apiKey: "AIzaSyDL0YRVBwV1dLdI6NvCIvEWeq2JGkzPwsE",
+  authDomain: "vidas-do-campo.firebaseapp.com",
+  databaseURL: "https://vidas-do-campo-default-rtdb.firebaseio.com",
+  projectId: "vidas-do-campo",
+  storageBucket: "vidas-do-campo.firebasestorage.app",
+  messagingSenderId: "86437962339",
+  appId: "1:86437962339:web:6d32a553a7bbe77cf50e56"
+};
+
+// Inicializa o Firebase (versão compat)
+firebase.initializeApp(firebaseConfig);
+const db = firebase.database();
+
+// ===== RANKING FUNCTIONS =====
 function saveToRanking(score, survival) {
-    let rank = JSON.parse(localStorage.getItem('vidasDoCampoRank')) || [];
-
-    const totalSecs = G.globalTotalSeconds;
-    const mins = Math.floor(totalSecs / 60);
-    const secs = totalSecs % 60;
-    const tempoFormatado = `${mins}m${secs.toString().padStart(2,'0')}s`;
-
-    const profileLabels = { leigo: '🌱', estudante: '📚', veterinario: '🩺' };
-    const speciesLabel = G.species === 'Bovinos' ? '🐄' : '🐑';
-
-    rank.push({
-        farm: G.farm,
-        score: score,
-        surv: survival,
-        date: new Date().toLocaleDateString('pt-BR'),
-        profile: G.audience,
-        profileIcon: profileLabels[G.audience] || '?',
-        species: G.species,
-        speciesIcon: speciesLabel,
-        time: tempoFormatado,
-        money: G.money,
-        medals: calcMedalCount()
-    });
-
-    rank.sort((a, b) => b.score - a.score);
-    rank = rank.slice(0, 10);
-    localStorage.setItem('vidasDoCampoRank', JSON.stringify(rank));
+  const entry = {
+    farm: G.farm,
+    score: score,
+    surv: survival,
+    date: new Date().toLocaleDateString('pt-BR'),
+    profile: G.audience,
+    profileIcon: { leigo: '🌱', estudante: '📚', veterinario: '🩺' }[G.audience] || '?',
+    species: G.species,
+    speciesIcon: G.species === 'Bovinos' ? '🐄' : '🐑',
+    time: formatTime(G.globalTotalSeconds),
+    money: G.money,
+    medals: calcMedalCount()
+  };
+  db.ref('ranking').push(entry);
 }
 
 function showRanking() {
-    const rank = JSON.parse(localStorage.getItem('vidasDoCampoRank')) || [];
-    const list = document.getElementById('ranking-list');
+  const list = document.getElementById('ranking-list');
+  list.innerHTML = '<p style="color: var(--text2); text-align: center; padding: 20px;">Carregando...</p>';
 
-    if (rank.length === 0) {
-        list.innerHTML = '<p style="color: var(--text2); text-align: center; padding: 30px 16px; font-size:0.9rem;">Nenhuma fazenda registrada ainda.<br><span style="font-size:0.8rem; opacity:0.6;">Complete sua primeira partida para entrar no ranking.</span></p>';
-    } else {
-        const medals = ['🥇','🥈','🥉'];
-        list.innerHTML = rank.map((r, i) => {
-            const bg = i === 0 ? 'rgba(232,160,32,0.08)' : i === 1 ? 'rgba(200,200,200,0.05)' : i === 2 ? 'rgba(180,120,60,0.05)' : 'transparent';
-            const medalIcons = r.medals > 0 ? '🏅'.repeat(Math.min(r.medals, 4)) : '';
-            return `
-            <div style="display:flex; justify-content:space-between; padding:14px 12px; border-bottom:1px solid var(--border); align-items:center; background:${bg}; border-radius: ${i===0?'12px 12px':'0'} 0 0;">
-                <div style="display:flex; align-items:center; gap:10px;">
-                    <span style="font-size:1.3rem; min-width:28px; text-align:center;">${medals[i] || '#'+(i+1)}</span>
-                    <div>
-                        <strong style="color:var(--green2); font-size:0.95rem;">${r.farm}</strong>
-                        <div style="font-size:0.72rem; color:var(--text2); margin-top:2px;">
-                            ${r.speciesIcon || ''} ${r.species || ''} · ${r.profileIcon || ''} ${r.date}
-                            ${r.time ? ' · ⏱️ ' + r.time : ''}
-                        </div>
-                        ${medalIcons ? '<div style="font-size:0.75rem; margin-top:2px;">'+medalIcons+'</div>' : ''}
-                    </div>
-                </div>
-                <div style="text-align:right; min-width:70px;">
-                    <div style="font-weight:bold; color:var(--amber); font-size:1rem;">${r.score} pts</div>
-                    <div style="font-size:0.8rem; color:var(--text2);">${r.surv}% vivos</div>
-                    ${r.money != null ? '<div style="font-size:0.75rem; color:var(--green2);">R$ '+r.money+'</div>' : ''}
-                </div>
-            </div>`;
-        }).join('');
+  db.ref('ranking').orderByChild('score').limitToLast(10).once('value', (snapshot) => {
+    const data = snapshot.val();
+    if (!data) {
+      list.innerHTML = '<p style="color: var(--text2); text-align: center; padding: 30px 16px;">Nenhuma fazenda registrada ainda.</p>';
+      return;
     }
+
+    const entries = Object.values(data);
+    entries.sort((a, b) => b.score - a.score);
+    const top = entries.slice(0, 10);
+
+    const medals = ['🥇','🥈','🥉'];
+    list.innerHTML = top.map((r, i) => {
+      const bg = i === 0 ? 'rgba(232,160,32,0.08)' : i === 1 ? 'rgba(200,200,200,0.05)' : i === 2 ? 'rgba(180,120,60,0.05)' : 'transparent';
+      const medalIcons = r.medals > 0 ? '🏅'.repeat(Math.min(r.medals, 4)) : '';
+      return `
+        <div style="display:flex; justify-content:space-between; padding:14px 12px; border-bottom:1px solid var(--border); align-items:center; background:${bg}; border-radius: ${i===0?'12px 12px':'0'} 0 0;">
+          <div style="display:flex; align-items:center; gap:10px;">
+            <span style="font-size:1.3rem; min-width:28px; text-align:center;">${medals[i] || '#'+(i+1)}</span>
+            <div>
+              <strong style="color:var(--green2); font-size:0.95rem;">${r.farm}</strong>
+              <div style="font-size:0.72rem; color:var(--text2); margin-top:2px;">
+                ${r.speciesIcon || ''} ${r.species || ''} · ${r.profileIcon || ''} ${r.date}
+                ${r.time ? ' · ⏱️ ' + r.time : ''}
+              </div>
+              ${medalIcons ? '<div style="font-size:0.75rem; margin-top:2px;">'+medalIcons+'</div>' : ''}
+            </div>
+          </div>
+          <div style="text-align:right; min-width:70px;">
+            <div style="font-weight:bold; color:var(--amber); font-size:1rem;">${r.score} pts</div>
+            <div style="font-size:0.8rem; color:var(--text2);">${r.surv}% vivos</div>
+            ${r.money != null ? '<div style="font-size:0.75rem; color:var(--green2);">R$ '+r.money+'</div>' : ''}
+          </div>
+        </div>`;
+    }).join('');
+
     switchScreen('screen-ranking');
+  }).catch(() => {
+    list.innerHTML = '<p style="color: var(--red); text-align: center;">Erro ao carregar ranking.</p>';
+  });
 }
 
-function closeRanking() { 
-    switchScreen(G.prevScreen || 'screen-splash'); 
+function formatTime(sec) {
+  const m = Math.floor(sec / 60);
+  const s = sec % 60;
+  return `${m}m${s.toString().padStart(2,'0')}s`;
 }
 
 /* ───────────────────────────────────────
@@ -3710,3 +3723,7 @@ function toggleDayNight() {
         }
     }
 })();
+
+function closeRanking() {
+  switchScreen(G.prevScreen || 'screen-splash');
+}
