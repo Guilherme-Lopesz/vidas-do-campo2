@@ -3730,3 +3730,7 @@ function toggleDayNight() {
 function closeRanking() {
   switchScreen(G.prevScreen || 'screen-splash');
 }
+
+function showAbout() {
+  switchScreen('screen-about');
+}
