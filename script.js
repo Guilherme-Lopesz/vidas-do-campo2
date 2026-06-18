@@ -21,6 +21,9 @@ const G = {
     mgFeedingDone: false
 };
 
+const HINT_COST = 25;
+let questionTimerRef = null;
+
 /* ───────────────────────────────────────
    MOTOR NARRATIVO (Personagens e Rotina)
 ─────────────────────────────────────── */
